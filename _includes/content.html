@@ -1,3 +1,17 @@
 <div class="content">
     {{ content }}
+    {% if page.last_modified_at %}
+    <div class="date">
+        <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.last_modified_at | date: "%B %-d, %Y" }}
+    </div>
+    {% elsif page.date %}
+    <div class="date">
+        <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.date | date: "%B %-d, %Y" }}
+    </div>
+    {% endif %}
+    {% if page.draft %}
+    <div class="draft">
+        <i class="fas fa-fw fa-person-digging" aria-hidden="true"></i> This page is under construction.
+    </div>
+    {% endif %}
 </div>

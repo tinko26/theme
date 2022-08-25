@@ -1,6 +1,10 @@
 <div class="breadcrumbs">
     {% if page.url == "/" %}
         <span class="current">Home</span>
+        {% if page.draft %}
+            <span class="separator">&vert;</span>
+            <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
+        {% endif %}
     {% else %}
         {% assign crumbs = page.url | split: '/' %}
         {% for crumb in crumbs offset: 1 %}
@@ -11,7 +15,7 @@
             {% if forloop.last %}
                 <span class="current">{{ page.title }}</span>
                 {% if page.draft %}
-                    <span class="separator">&gt;</span>
+                    <span class="separator">&vert;</span>
                     <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
                 {% endif %}
             {% else %}

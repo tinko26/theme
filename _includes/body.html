@@ -1,7 +1,4 @@
 <body>
-    {% include header.html %}
-    {% include breadcrumbs.html %}
-    {% include toc.html sanitize = false html = content h_min = 1 h_max = 2 class = "toc" skip_no_ids = true item_class = "heading%level%" submenu_class = "heading%level%_children" %}
-    {% include content.html %}
-    {% include footer.html %}
+  {% include menu.html %}
+  {% include grid.html %}
 </body>

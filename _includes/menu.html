@@ -1,6 +1,7 @@
+{% assign M = site.data.menu[menu] %}
+
 <div class="menu" onclick="menuClose()">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    {% for m in M %}
+        <a href="{{ m.url | relative_url }}">{{ m.title }}</a>
+    {% endfor %}
 </div>

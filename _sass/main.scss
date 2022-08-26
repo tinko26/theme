@@ -4,6 +4,7 @@ $color-link: #2f7d95 !default;
 }
 
 body {
+    height: 100%;
     margin: 0;
     min-height: 100%;
     padding: 0;
@@ -203,6 +204,7 @@ html {
     grid-template-columns: 0 auto auto 0;
     grid-template-rows: min-content min-content min-content min-content auto min-content min-content;
     max-width: 100%;
+    min-height: 100%;
 }
 
 .grid-cell-1 {
@@ -344,7 +346,7 @@ html {
 
 .menu {
     align-content: space-around;
-    align-items: center;
+    align-items: baseline;
     background-color: #263238;
     background-color: rgba(38, 50, 56, 0.9);
     display: flex;

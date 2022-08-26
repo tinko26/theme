@@ -14,7 +14,9 @@
     <div class="grid-cell-9"></div>
     <div class="grid-cell-10"></div>
     <div class="grid-cell-11">
+        {% if page.toc %}
         {% include toc.html sanitize = false html = content h_min = 1 h_max = 2 class = "toc" skip_no_ids = true item_class = "heading%level%" submenu_class = "heading%level%_children" %}
+        {% endif %}
     </div>
     <div class="grid-cell-12"></div>
     <div class="grid-cell-13">

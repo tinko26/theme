@@ -285,16 +285,14 @@ html {
 .header .subtitle {
     color: #a9bdc6;
     color: rgba(255, 255, 255, 0.25);
-    display: block;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    min-height: 1.5rem;
 }
 
 .header .title {
     color: white;
-    display: block;
-    font-weight: bold;
     font-size: 1.5rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .header-background {

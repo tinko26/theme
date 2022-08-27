@@ -386,10 +386,6 @@ html {
     text-decoration: underline;
 }
 
-.toc .entries {
-    padding: 1rem 1rem 1rem 1rem;
-}
-
 .toc .entry1 {
     margin-bottom: 0.5rem;
 }
@@ -405,6 +401,10 @@ html {
 .toc .heading {
     display: block;
     font-size: 1.563rem;
+}
+
+.toc .main {
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 .toc .offset {
@@ -449,7 +449,7 @@ html {
         top: 0;
     }
 
-    .toc .entries {
+    .toc .main {
         border-left: 1px solid #aaa;
     }
 

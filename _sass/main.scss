@@ -402,7 +402,7 @@ html {
 }
 
 .toc .heading {
-    display: none;
+    display: block;
     font-size: 1.563rem;
 }
 
@@ -445,7 +445,7 @@ html {
     }
 
     .toc .heading {
-        display: block;
+        display: none;
     }
 }
 

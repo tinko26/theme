@@ -41,7 +41,7 @@ html {
 }
 
 .content {
-    margin-top:2rem;
+    margin-top: 2rem;
     padding: 1rem 1rem 5rem 1rem;
 }
 
@@ -55,11 +55,11 @@ html {
     text-decoration: underline;
 }
 
-.content a>code {
+.content a > code {
     color: deeppink;
 }
 
-.content a:hover>code {
+.content a:hover > code {
     text-decoration: underline;
 }
 
@@ -291,7 +291,8 @@ html {
 
 .header .title {
     color: white;
-    font-size: 2rem;
+    font-size: 1.563rem;
+    font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
@@ -393,12 +394,12 @@ html {
         grid-template-columns: auto max-content;
         grid-template-rows: auto;
     }
-    
+
     .grid2_cell1 {
         grid-column: 1;
         grid-row: 1;
     }
-    
+
     .grid2_cell2 {
         grid-column: 2;
         grid-row: 1;

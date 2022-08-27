@@ -45,11 +45,15 @@ html {
 }
 
 .content-footer {
+    margin-bottom: 2rem;
     margin-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .content-main {
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .content-main a {
@@ -192,7 +196,19 @@ html {
 }
 
 .content-offset {
-    height: 2rem;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.content-toc {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.content-wiki {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .footer {
@@ -332,10 +348,27 @@ html {
     height: 6px;
 }
 
-.sidebar-offset {
-    height: 2rem;
+.sidebar-footer {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
+.sidebar-offset {
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sidebar-toc {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sidebar-wiki {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
 .toc a {
     color: #888;

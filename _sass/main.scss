@@ -16,7 +16,7 @@ code {
 html {
     background-color: #fff;
     color: #454545;
-    font-family: "Segoe UI", "Trebuchet MS", "Helvetica", sans-serif;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     height: 100%;
     line-height: 1.5rem;
@@ -389,16 +389,20 @@ html {
     text-decoration: underline;
 }
 
-.toc .heading1 {
+.toc .entry1 {
     margin-bottom: 0.5rem;
 }
 
-.toc .heading1_children {
+.toc .entry1_children {
     margin-left: 1rem;
 }
 
-.toc .heading2 {
+.toc .entry2 {
     margin-top: 0.5rem;
+}
+
+.toc .heading {
+    font-size: 1.563rem;
 }
 
 @media screen and (min-width: 768px) {

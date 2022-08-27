@@ -477,6 +477,22 @@ html {
 
 /* NEW */
 
+.breadcrumbs {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+}
+
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+}
+
+.footer-background {
+    background-color: #eee;
+}
+
 .grid1 {
     display: grid;
     grid-template-columns: auto;
@@ -488,10 +504,6 @@ html {
 .grid1_cell1 {
     grid-column: 1;
     grid-row: 1;
-}
-
-.header {
-    background-color: #263238;
 }
 
 .grid1_cell2 {
@@ -519,8 +531,14 @@ html {
     grid-row: 6;
 }
 
-.footer {
-    background-color: #eee;
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+}
+
+.header-background {
+    background-color: #263238;
 }
 
 .shadow {

@@ -246,7 +246,7 @@ html {
 .grid2 {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: min-content auto;
+    grid-template-rows: min-content auto min-content;
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
@@ -260,6 +260,11 @@ html {
 .grid2_cell2 {
     grid-column: 1;
     grid-row: 1;
+}
+
+.grid2_cell3 {
+    grid-column: 1;
+    grid-row: 3;
 }
 
 .header {
@@ -378,17 +383,22 @@ html {
 
     .grid2 {
         grid-template-columns: auto max-content;
-        grid-template-rows: auto;
+        grid-template-rows: min-content auto;
     }
 
     .grid2_cell1 {
         grid-column: 1;
-        grid-row: 1;
+        grid-row: 1 / span 2;
     }
 
     .grid2_cell2 {
         grid-column: 2;
         grid-row: 1;
+    }
+
+    .grid2_cell2 {
+        grid-column: 2;
+        grid-row: 2;
     }
 
     .toc {
@@ -402,6 +412,11 @@ html {
 
     .toc .heading {
         display: none;
+    }
+
+    .wiki {
+        position: sticky;
+        top: 0;
     }
 }
 

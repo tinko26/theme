@@ -115,7 +115,7 @@
     {% if jekyll_toc != '' %}
         {% assign rootAttributes = '' %}
 
-        {% capture rootAttributes %} class="entries"{% endcapture %}
+        {% capture rootAttributes %} class="toc-entries"{% endcapture %}
 
         {% if include.id and include.id != blank %}
             {% capture rootAttributes %}{{ rootAttributes }} id="{{ include.id }}"{% endcapture %}

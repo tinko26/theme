@@ -1,17 +1,26 @@
 <div class="content">
-    {{ content }}
+    <div class="content-offset"></div>
+    <div class="content-toc">
+        {% include toc.html %}
+    </div>
+    <div class="content-main">
+        {{ content }}
+    </div>
+    <div class="content-wiki">
+        {% include wiki.html %}
+    </div>
     <div class="content-footer">
         {% if page.last_modified_at %}
-        <div class="date">
+        <div class="content-date">
             <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.last_modified_at | date: "%B %-d, %Y" }}
         </div>
         {% elsif page.date %}
-        <div class="date">
+        <div class="content-date">
             <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.date | date: "%B %-d, %Y" }}
         </div>
         {% endif %}
         {% if page.draft %}
-        <div class="draft">
+        <div class="content-draft">
             <i class="fas fa-fw fa-person-digging" aria-hidden="true"></i> This page is under construction.
         </div>
         {% endif %}

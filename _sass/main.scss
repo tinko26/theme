@@ -40,127 +40,134 @@ html {
     text-decoration: underline;
 }
 
-.content {
-    margin-top: 2rem;
-    padding: 1rem 1rem 5rem 1rem;
+.content-draft {
+    margin-top: 0.5rem;
 }
 
-.content a {
+.content-footer {
+    margin-top: 4rem;
+}
+
+.content-main {
+    padding: 1rem;
+}
+
+.content-main a {
     color: #2f7d95;
     text-decoration: none;
 }
 
-.content a:focus,
-.content a:hover {
+.content-main a:focus,
+.content-main a:hover {
     text-decoration: underline;
 }
 
-.content div.highlight {
+.content-main div.highlight {
     display: grid;
 }
 
-.content div.highlighter-rouge {
+.content-main div.highlighter-rouge {
     background: #263238;
     border-radius: 4px;
     margin-bottom: 1rem;
 }
 
-.content h1 {
+.content-main h1 {
     font-size: 1.563rem;
     margin-top: 3.126rem;
 }
 
-.content h2 {
+.content-main h2 {
     font-size: 1.25rem;
     margin-top: 2.5rem;
 }
 
-.content h3 {
+.content-main h3 {
     font-size: 1.125rem;
     margin-top: 2.25rem;
 }
 
-.content h4 {
+.content-main h4 {
     font-size: 1.0625rem;
     margin-top: 2.125rem;
 }
 
-.content h5 {
+.content-main h5 {
     font-size: 1.03125rem;
     margin-top: 2.0625rem;
 }
 
-.content h6 {
+.content-main h6 {
     font-size: 1rem;
     margin-top: 2rem;
 }
 
-.content li {
+.content-main li {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
 
-.content pre.highlight {
+.content-main pre.highlight {
     line-height: 1.8rem;
     margin: 0;
     overflow-x: auto;
     padding: 1rem;
 }
 
-.content pre.highlight .c1 {
+.content-main pre.highlight .c1 {
     color: lightslategray;
 }
 
-.content pre.highlight .cm {
+.content-main pre.highlight .cm {
     color: lightslategray;
 }
 
-.content pre.highlight .cp {
+.content-main pre.highlight .cp {
     color: skyblue;
 }
 
-.content pre.highlight .k {
+.content-main pre.highlight .k {
     color: skyblue;
 }
 
-.content pre.highlight .kt {
+.content-main pre.highlight .kt {
     color: skyblue;
 }
 
-.content pre.highlight .mh {
+.content-main pre.highlight .mh {
     color: greenyellow;
 }
 
-.content pre.highlight .mi {
+.content-main pre.highlight .mi {
     color: greenyellow;
 }
 
-.content pre.highlight .n {
+.content-main pre.highlight .n {
     color: white;
 }
 
-.content pre.highlight .nb {
+.content-main pre.highlight .nb {
     color: skyblue;
 }
 
-.content pre.highlight .nf {
+.content-main pre.highlight .nf {
     color: white;
 }
 
-.content pre.highlight .o {
+.content-main pre.highlight .o {
     color: skyblue;
 }
 
-.content pre.highlight .p {
+.content-main pre.highlight .p {
     color: white;
 }
 
-.content table {
+.content-main table {
     border-collapse: collapse;
     margin-bottom: 1rem;
 }
 
-.content td {
+.content-main td {
     border-bottom: 1px solid #aaa;
     border-top: 1px solid #aaa;
     padding: 0.5rem;
@@ -168,7 +175,7 @@ html {
     vertical-align: top;
 }
 
-.content th {
+.content-main th {
     background-color: #eee;
     border-bottom: 2px solid #aaa;
     padding: 0.5rem;
@@ -176,20 +183,16 @@ html {
     vertical-align: top;
 }
 
-.content *:first-child {
+.content-main *:first-child {
     margin-top: 0;
 }
 
-.content :not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) > code {
+.content-main :not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) > code {
     color: deeppink;
 }
 
-.content-footer {
-    margin-top: 3rem;
-}
-
-.content-footer .draft {
-    margin-top: 0.5rem;
+.content-offset {
+    height: 2rem;
 }
 
 .footer {
@@ -246,7 +249,7 @@ html {
 .grid2 {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: min-content auto min-content;
+    grid-template-rows: auto;
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
@@ -254,17 +257,11 @@ html {
 
 .grid2_cell1 {
     grid-column: 1;
-    grid-row: 2;
-}
-
-.grid2_cell2 {
-    grid-column: 1;
     grid-row: 1;
 }
 
-.grid2_cell3 {
-    grid-column: 1;
-    grid-row: 3;
+.grid2_cell2 {
+    display: none;
 }
 
 .header {
@@ -335,6 +332,11 @@ html {
     height: 6px;
 }
 
+.sidebar-offset {
+    height: 2rem;
+}
+
+
 .toc a {
     color: #888;
     text-decoration: none;
@@ -370,6 +372,11 @@ html {
     height: 2rem;
 }
 
+.wiki {
+    background-color: orange;
+    height:100px;
+}
+
 @media screen and (min-width: 768px) {
     html {
         font-size: 18px;
@@ -381,42 +388,36 @@ html {
         font-size: 20px;
     }
 
-    .grid2 {
-        grid-template-columns: auto max-content;
-        grid-template-rows: min-content auto;
+    .content-toc {
+        display: none;
     }
 
-    .grid2_cell1 {
-        grid-column: 1;
-        grid-row: 1 / span 2;
+    .content-wiki {
+        display: none;
+    }
+
+    .grid2 {
+        grid-template-columns: auto max-content;
+        grid-template-rows: auto;
     }
 
     .grid2_cell2 {
+        display: block;
         grid-column: 2;
         grid-row: 1;
     }
 
-    .grid2_cell3 {
-        grid-column: 2;
-        grid-row: 2;
+    .sidebar {
+        position: sticky;
+        top: 0;
     }
 
     .toc {
-        position: sticky;
-        top: 0;
-    }
-
-    .toc .main {
         border-left: 1px solid #aaa;
     }
 
-    .toc .heading {
+    .toc-heading {
         display: none;
-    }
-
-    .wiki {
-        position: sticky;
-        top: 0;
     }
 }
 

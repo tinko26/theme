@@ -55,6 +55,7 @@ html {
     text-decoration: underline;
 }
 
+/*
 .content a > code {
     color: deeppink;
 }
@@ -62,6 +63,7 @@ html {
 .content a:hover > code {
     text-decoration: underline;
 }
+*/
 
 .content div.highlight {
     display: grid;
@@ -108,6 +110,7 @@ html {
     margin-top: 0.5rem;
 }
 
+/*
 .content p code,
 .content td code {
     background-color: white;
@@ -117,6 +120,7 @@ html {
     font-size: 1rem;
     padding: 0.1rem 0.3rem;
 }
+*/
 
 .content pre.highlight {
     line-height: 1.8rem;
@@ -180,6 +184,7 @@ html {
 
 .content td {
     border-bottom: 1px solid #aaa;
+    border-top: 1px solid #aaa;
     padding: 0.5rem;
     text-align: left;
     vertical-align: top;

@@ -17,7 +17,7 @@ html {
     background-color: #fff;
     color: #454545;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 24px;
+    font-size: 16px;
     height: 100%;
     line-height: 1.5rem;
     transition: all 0.5s ease-in-out;
@@ -402,12 +402,13 @@ html {
 }
 
 .toc .heading {
+    display: none;
     font-size: 1.563rem;
 }
 
 @media screen and (min-width: 768px) {
     html {
-        font-size: 27px;
+        font-size: 18px;
     }
 }
 
@@ -442,17 +443,21 @@ html {
         position: sticky;
         top: 0;
     }
+
+    .toc .heading {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     html {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
 @media screen and (min-width: 1280px) {
     html {
-        font-size: 33px;
+        font-size: 22px;
     }
 
     .grid {

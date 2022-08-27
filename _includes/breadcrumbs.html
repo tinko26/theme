@@ -1,7 +1,7 @@
 <div class="breadcrumbs">
     {%- if page.url == "/" -%}
         <span class="current">Home</span>
-        {%- if page.draft -%}
+        {%- if page.draft %}
             <span class="separator">&vert;</span>
             <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
         {%- endif -%}
@@ -11,7 +11,7 @@
             {%- if forloop.first -%}
                 <a href="{{ '/' | relative_url }}">Home</a>
                 <span class="separator">&gt;</span>
-            {%- endif -%}
+            {% endif -%}
             {%- if forloop.last -%}
                 <span class="current">{{ page.title }}</span>
                 {%- if page.draft -%}
@@ -23,7 +23,7 @@
                     {{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}
                 </a>
                 <span class="separator">&gt;</span>
-            {%- endif -%}
+            {% endif -%}
         {%- endfor -%}
     {%- endif -%}
 </div>

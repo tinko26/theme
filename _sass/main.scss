@@ -376,10 +376,6 @@ html {
     text-decoration: underline;
 }
 
-.toc {
-    padding: 1rem 1rem 1rem 1rem;
-}
-
 .toc a {
     color: #888;
     text-decoration: none;
@@ -405,6 +401,10 @@ html {
 .toc .heading {
     display: block;
     font-size: 1.563rem;
+}
+
+.toc .main {
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 .toc .offset {
@@ -470,6 +470,6 @@ html {
     }
 
     .grid {
-        grid-template-columns: auto 300px 980px auto;
+        grid-template-columns: auto 980px 300px auto;
     }
 }

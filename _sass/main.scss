@@ -38,7 +38,8 @@ html {
 }
 
 .content {
-    padding: 3rem 1rem 5rem 1rem;
+    margin-top:2rem;
+    padding: 1rem 1rem 5rem 1rem;
 }
 
 .content a {
@@ -225,42 +226,42 @@ html {
 }
 
 .grid-cell-4 {
-    border-bottom: 1px solid #aaa;
     grid-column: 1;
     grid-row: 2;
 }
 
 .grid-cell-5 {
-    border-bottom: 1px solid #aaa;
     grid-column: 2 / span 2;
     grid-row: 2;
 }
 
 .grid-cell-6 {
-    border-bottom: 1px solid #aaa;
     grid-column: 4;
     grid-row: 2;
 }
 
 .grid-cell-7 {
     background-image: linear-gradient(180deg, #ccc, white);
+    border-top: 1px solid #aaa;
     grid-column: 1;
     grid-row: 3;
-    height: 5px;
+    height: 6px;
 }
 
 .grid-cell-8 {
     background-image: linear-gradient(180deg, #ccc, white);
+    border-top: 1px solid #aaa;
     grid-column: 2 / span 2;
     grid-row: 3;
-    height: 5px;
+    height: 6px;
 }
 
 .grid-cell-9 {
     background-image: linear-gradient(180deg, #ccc, white);
+    border-top: 1px solid #aaa;
     grid-column: 4;
     grid-row: 3;
-    height: 5px;
+    height: 6px;
 }
 
 .grid-cell-10 {
@@ -288,7 +289,7 @@ html {
     border-top: 1px solid #aaa;
     grid-column: 1;
     grid-row: 6;
-    height: 5px;
+    height: 6px;
 }
 
 .grid-cell-15 {
@@ -296,7 +297,7 @@ html {
     border-top: 1px solid #aaa;
     grid-column: 2 / span 2;
     grid-row: 6;
-    height: 5px;
+    height: 6px;
 }
 
 .grid-cell-16 {
@@ -304,7 +305,7 @@ html {
     border-top: 1px solid #aaa;
     grid-column: 4;
     grid-row: 6;
-    height: 5px;
+    height: 6px;
 }
 
 .grid-cell-17 {
@@ -376,7 +377,7 @@ html {
 }
 
 .toc {
-    padding: 3rem 1rem 0.5rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 .toc a {
@@ -404,6 +405,10 @@ html {
 .toc .heading {
     display: block;
     font-size: 1.563rem;
+}
+
+.toc .offset {
+    height: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -446,6 +451,10 @@ html {
 
     .toc .heading {
         display: none;
+    }
+
+    .toc .main {
+        border-left: 1px solid #aaa;
     }
 }
 

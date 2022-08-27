@@ -55,16 +55,6 @@ html {
     text-decoration: underline;
 }
 
-/*
-.content a > code {
-    color: deeppink;
-}
-
-.content a:hover > code {
-    text-decoration: underline;
-}
-*/
-
 .content div.highlight {
     display: grid;
 }
@@ -109,18 +99,6 @@ html {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
-
-/*
-.content p code,
-.content td code {
-    background-color: white;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    color: deeppink;
-    font-size: 1rem;
-    padding: 0.1rem 0.3rem;
-}
-*/
 
 .content pre.highlight {
     line-height: 1.8rem;
@@ -200,6 +178,10 @@ html {
 
 .content *:first-child {
     margin-top: 0;
+}
+
+.content :not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) code {
+    color: deeppink;
 }
 
 .content-footer {

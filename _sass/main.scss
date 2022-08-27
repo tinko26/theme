@@ -399,15 +399,6 @@ html {
     margin-top: 0;
 }
 
-.wiki {
-    background-color: orange;
-}
-
-.wiki-heading {
-    font-size: 1.563rem;
-    margin-top: 0;
-}
-
 .wiki a {
     color: #888;
     display: block;
@@ -417,6 +408,11 @@ html {
 .wiki a:hover,
 .wiki a:focus {
     text-decoration: underline;
+}
+
+.wiki-heading {
+    font-size: 1.563rem;
+    margin-top: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -454,12 +450,20 @@ html {
         top: 0;
     }
 
-    .toc {
+    .sidebar-toc {
+        border-left: 1px solid #aaa;
+    }
+
+    .sidebar-wiki {
         border-left: 1px solid #aaa;
     }
 
     .toc-heading {
-        display: none;
+        font-size: 1rem;
+    }
+
+    .wiki-heading {
+        font-size: 1rem;
     }
 }
 

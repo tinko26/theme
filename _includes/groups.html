@@ -10,7 +10,7 @@
   <div class="group-entries">
     {%- for e in G.entries -%}
       {%- if e.url == page.url -%}
-        <div class="group-active">{{ e.title }}</span>
+        <div class="group-active">{{ e.title }}</div>
       {%- else -%}
         <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
       {%- endif -%}

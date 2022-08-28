@@ -1,10 +1,21 @@
 <div class="sidebar">
-    <div class="sidebar-offset"></div>
+    <div class="sidebar-top"></div>
+    {%- if page.toc -%}
     <div class="sidebar-toc">
         {% include toc.html %}
     </div>
+    {%- if page.wiki -%}
+    <div class="sidebar-toc-offset"></div>
+    {%- endif -%}
+    {%- endif -%}
+    {%- if page.wiki -%}
     <div class="sidebar-wiki">
         {% include wiki.html %}
     </div>
+    {%- if false -%}
+    <div class="sidebar-wiki-offset"></div>
+    {%- endif -%}
+    {%- endif -%}
     <div class="sidebar-footer"></div>
+    <div class="sidebar-bottom"></div>
 </div>

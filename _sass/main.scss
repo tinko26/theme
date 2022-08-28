@@ -287,6 +287,9 @@ html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-left: 1px solid #aaa;
 }
 
 .group-entries {
@@ -425,7 +428,7 @@ html {
   gap: 3rem;
 }
 
-.sidebar-flex > div {
+.sidebar-flex > div:not(.sidebar-groups) {
   padding-left: 1rem;
   padding-right: 1rem;
 }

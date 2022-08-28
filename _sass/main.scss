@@ -353,11 +353,11 @@ html {
   align-items: baseline;
   background-color: #263238;
   background-color: rgba(38, 50, 56, 0.95);
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1.5rem;
-  height: 0;
+  height: 100%;
   justify-items: center;
   justify-content: center;
   left: 0;

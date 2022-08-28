@@ -1,7 +1,7 @@
 function menuOpen() {
-    document.getElementsByClassName("menu")[0].style.height = "100%";
+    document.getElementsByClassName("menu")[0].style.display = "flex";
 }
 
 function menuClose() {
-    document.getElementsByClassName("menu")[0].style.height = "0%";
+    document.getElementsByClassName("menu")[0].style.display = "none";
 }

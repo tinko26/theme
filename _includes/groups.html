@@ -2,11 +2,15 @@
 {%- for g in page.groups -%}
 {%- assign G = site.data.groups[g] -%}
 <div class="group">
-  <div class="group-title">{{ G.title }}</div>
+  <h1 class="group-title">{{ G.title }}</h1>
   <div class="group-subtitle">{{ G.subtitle }}</div>
   <div class="group-entries">
     {%- for e in G.entries -%}
-      <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+      {%- if e.url == page.url -%}
+        <div class="group-active">{{ e.title }}</span>
+      {%- else -%}
+        <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+      {%- endif -%}
     {%- endfor -%}
   </div>
 </div>

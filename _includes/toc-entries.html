@@ -69,8 +69,7 @@
 
         {% capture listItemClass %} class="{{ 'toc-entryL' | replace: 'L', currLevel }}"{% endcapture %}
 
-        {% assign subMenuLevel = currLevel | minus: 1 %}
-        {% capture subMenuClass %} class="{{ 'toc-entriesL' | replace: 'L', subMenuLevel | plus: 1 }}"{% endcapture %}
+        {% capture subMenuClass %} class="{{ 'toc-entriesL' | replace: 'L', currLevel }}"{% endcapture %}
 
         {% capture anchorBody %}{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}{% endcapture %}
 

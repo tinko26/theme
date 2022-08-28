@@ -1,36 +1,40 @@
 <div class="content">
     <div class="content-top"></div>
-    {%- if page.toc -%}
-    <div class="content-toc">
-        {% include toc.html %}
-    </div>
-    <div class="content-toc-offset"></div>
-    {%- endif -%}
-    <div class="content-main">
-        {{ content }}
-    </div>
-    <div class="content-main-offset"></div>
-    {%- if page.wiki -%}
-    <div class="content-wiki">
-        {% include wiki.html %}
-    </div>
-    <div class="content-wiki-offset"></div>
-    {%- endif -%}
-    <div class="content-footer">
-        {%- if page.last_modified_at -%}
-        <div class="content-date">
-            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.last_modified_at | date: "%B %-d, %Y" }}
-        </div>
-        {%- elsif page.date -%}
-        <div class="content-date">
-            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.date | date: "%B %-d, %Y" }}
+    <div class="content-flex">
+        {%- if page.toc -%}
+        <div class="content-toc">
+            {% include toc.html %}
         </div>
         {%- endif -%}
-        {%- if page.draft -%}
-        <div class="content-draft">
-            <i class="fas fa-fw fa-person-digging" aria-hidden="true"></i> This page is under construction.
+        <div class="content-main">
+            {{ content }}
+        </div>
+        {%- if page.seealso -%}
+        <div class="content-seealso">
+            {% include seealso.html %}
         </div>
         {%- endif -%}
+        {%- if page.wiki -%}
+        <div class="content-wiki">
+            {% include wiki.html %}
+        </div>
+        {%- endif -%}
+        <div class="content-footer">
+            {%- if page.last_modified_at -%}
+            <div class="content-date">
+                <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.last_modified_at | date: "%B %-d, %Y" }}
+            </div>
+            {%- elsif page.date -%}
+            <div class="content-date">
+                <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.date | date: "%B %-d, %Y" }}
+            </div>
+            {%- endif -%}
+            {%- if page.draft -%}
+            <div class="content-draft">
+                <i class="fas fa-fw fa-person-digging" aria-hidden="true"></i> This page is under construction.
+            </div>
+            {%- endif -%}
+        </div>
     </div>
     <div class="content-bottom"></div>
 </div>

@@ -349,9 +349,16 @@ html {
 }
 
 .menu {
+  align-content: space-around;
+  align-items: baseline;
   background-color: #263238;
   background-color: rgba(38, 50, 56, 0.95);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   height: 0;
+  justify-items: center;
+  justify-content: center;
   left: 0;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -372,16 +379,6 @@ html {
 .menu a:hover,
 .menu a:focus {
   text-decoration: underline;
-}
-
-.menu-entries {
-  align-content: space-around;
-  align-items: baseline;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-items: center;
-  justify-content: center;
 }
 
 .seealso a {

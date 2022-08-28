@@ -1,8 +1,6 @@
 {%- assign E = site.data.menu["entries"] -%}
 <div class="menu" onclick="menuClose()">
-    <div class="menu-entries">
-        {%- for e in E -%}
-        <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
-        {%- endfor -%}
-    </div>
+    {%- for e in E -%}
+    <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+    {%- endfor -%}
 </div>

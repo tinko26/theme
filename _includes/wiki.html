@@ -1,8 +1,8 @@
 <div class="wiki">
     <h1 class="wiki-heading">Wikipedia</h1>
     <div class="wiki-links">
-        <a href="https://en.wikipedia.org/wiki/Algorithm">Algorithm</a>
-        <a href="https://en.wikipedia.org/wiki/Queue">Queue</a>
-        <a href="https://en.wikipedia.org/wiki/Stack">Stack</a>
+        {%- for link in page.wiki -%}
+            <a href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+        {%- endfor -%}
     </div>
 </div>

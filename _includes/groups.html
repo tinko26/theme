@@ -3,7 +3,10 @@
 {%- assign G = site.data.groups[g] -%}
 <div class="group">
   <h1 class="group-title">{{ G.title }}</h1>
+  {%- if G.subtitle -%}
   <div class="group-subtitle">{{ G.subtitle }}</div>
+  {%- endif -%}
+  {%- if G.entries -%}
   <div class="group-entries">
     {%- for e in G.entries -%}
       {%- if e.url == page.url -%}
@@ -13,6 +16,7 @@
       {%- endif -%}
     {%- endfor -%}
   </div>
+  {%- endif -%}
 </div>
 {%- endfor -%}
 </div>

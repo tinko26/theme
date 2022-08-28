@@ -1,3 +1,10 @@
 <div class="footer-background">
-    <div class="footer">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</div>
+    <div class="footer">
+        &copy; {{ site.time | date: '%Y' }} 
+        {%- if site.author_url -%}
+        <a href="{{ site.author_url }}">{{ site.author }}</a>
+        {%- else %}
+        {{ site.author }}
+        {% endif -%}
+    </div>
 </div>

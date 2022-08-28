@@ -16,6 +16,11 @@
             {% include wiki.html %}
         </div>
         {%- endif -%}
+        {%- if page.groups -%}
+        <div class="sidebar-groups">
+            {% include groups.html %}
+        </div>
+        {%- endif -%}
         <div class="sidebar-footer"></div>
     </div>
     <div class="sidebar-bottom"></div>

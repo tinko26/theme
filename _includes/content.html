@@ -19,6 +19,11 @@
             {% include wiki.html %}
         </div>
         {%- endif -%}
+        {%- if page.groups -%}
+        <div class="content-groups">
+            {% include groups.html %}
+        </div>
+        {%- endif -%}
         <div class="content-footer">
             {%- if page.last_modified_at -%}
             <div class="content-date">

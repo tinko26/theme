@@ -1,0 +1,10 @@
+group1:
+  title: "Group 1"
+  subtitle: "Group 1 subtitle"
+  entries:
+  - title: "Entry 1"
+    url: /entry-1/
+  - title: "Entry 2"
+    url: /entry-2/
+  - title: "Entry 3"
+    url: /entry-3/    

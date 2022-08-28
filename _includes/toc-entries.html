@@ -67,10 +67,10 @@
         {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}
         {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
-        {% capture listItemClass %} class="{{ 'entryL' | replace: 'L', currLevel }}"{% endcapture %}
+        {% capture listItemClass %} class="{{ 'toc-entryL' | replace: 'L', currLevel }}"{% endcapture %}
 
         {% assign subMenuLevel = currLevel | minus: 1 %}
-        {% capture subMenuClass %} class="{{ 'entryL_children' | replace: 'L', subMenuLevel }}"{% endcapture %}
+        {% capture subMenuClass %} class="{{ 'toc-entriesL' | replace: 'L', subMenuLevel | plus: 1 }}"{% endcapture %}
 
         {% capture anchorBody %}{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}{% endcapture %}
 
@@ -115,7 +115,7 @@
     {% if jekyll_toc != '' %}
         {% assign rootAttributes = '' %}
 
-        {% capture rootAttributes %} class="toc-entries"{% endcapture %}
+        {% capture rootAttributes %} class="toc-entries1"{% endcapture %}
 
         {% if include.id and include.id != blank %}
             {% capture rootAttributes %}{{ rootAttributes }} id="{{ include.id }}"{% endcapture %}

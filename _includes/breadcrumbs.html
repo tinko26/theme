@@ -34,7 +34,7 @@
                     {%- endif -%}
                 </a>
                 <span class="separator">&gt;</span>
-                {%- assign crumb_path = crumb_path | append crumb | append "/" -%}
+                {%- assign crumb_path = crumb_path | append: crumb | append: "/" -%}
             {% endif -%}
         {%- endfor -%}
     {%- endif -%}

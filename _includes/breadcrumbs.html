@@ -1,29 +1,11 @@
-<div class="breadcrumbs">
-    {%- if page.url == "/" -%}
-        <span class="current">Home</span>
-        {%- if page.draft %}
-            <span class="separator">&vert;</span>
-            <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
-        {%- endif -%}
-    {%- else -%}
-        {%- assign crumbs = page.url | split: '/' -%}
-        {%- for crumb in crumbs offset: 1 -%}
-            {%- if forloop.first -%}
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <span class="separator">&gt;</span>
-            {% endif -%}
-            {%- if forloop.last -%}
-                <span class="current">{{ page.title }}</span>
-                {%- if page.draft %}
-                    <span class="separator">&vert;</span>
-                    <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
-                {%- endif -%}
-            {%- else -%}
-                <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}">
-                    {{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}
-                </a>
-                <span class="separator">&gt;</span>
-            {% endif -%}
-        {%- endfor -%}
-    {%- endif -%}
-</div>
+{%- if page.breadcrumbs -%}
+{%- if page.breadcrumbs == 1 -%}
+{%- include "breadcrumbs1.html" -%}
+{%- elsif page.breadcrumbs == 2 -%}
+{%- include "breadcrumbs2.html" -%}
+{%- else -%}
+{%- include "breadcrumbs1.html" -%}
+{%- endif -%}
+{%- else -%}
+{%- include "breadcrumbs1.html" -%}
+{%- endif -%}

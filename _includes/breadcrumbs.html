@@ -6,6 +6,7 @@
             <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
         {%- endif -%}
     {%- else -%}
+        {%- assign crumb_path = "/" -%}
         {%- assign crumbs = page.url | split: '/' -%}
         {%- for crumb in crumbs offset: 1 -%}
             {%- if forloop.first -%}
@@ -25,7 +26,7 @@
                     <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
                 {%- endif -%}
             {%- else -%}
-                <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}">
+                <a href="{{ crumb | prepend: crumb_path | relative_url }}">
                     {%- if page.api -%}
                     <code>{{ crumb }}</code>
                     {%- else -%}
@@ -33,6 +34,7 @@
                     {%- endif -%}
                 </a>
                 <span class="separator">&gt;</span>
+                {%- assign crumb_path = crumb_path | append crumb | append "/" -%}
             {% endif -%}
         {%- endfor -%}
     {%- endif -%}

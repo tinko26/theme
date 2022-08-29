@@ -16,6 +16,11 @@
             {% include wiki.html %}
         </div>
         {%- endif -%}
+        {%- if page.external -%}
+        <div class="sidebar-external">
+            {% include external.html %}
+        </div>
+        {%- endif -%}
         {%- if page.groups -%}
         <div class="sidebar-groups">
             {% include groups.html %}

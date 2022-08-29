@@ -1,11 +1,39 @@
-{%- if page.breadcrumbs -%}
-{%- if page.breadcrumbs == 1 -%}
-{%- include breadcrumbs1.html -%}
-{%- elsif page.breadcrumbs == 2 -%}
-{%- include breadcrumbs2.html -%}
-{%- else -%}
-{%- include breadcrumbs1.html -%}
-{%- endif -%}
-{%- else -%}
-{%- include breadcrumbs1.html -%}
-{%- endif -%}
+<div class="breadcrumbs">
+    {%- if page.url == "/" -%}
+        <span class="current">Home</span>
+        {%- if page.draft %}
+            <span class="separator">&vert;</span>
+            <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
+        {%- endif -%}
+    {%- else -%}
+        {%- assign crumbs = page.url | split: '/' -%}
+        {%- for crumb in crumbs offset: 1 -%}
+            {%- if forloop.first -%}
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <span class="separator">&gt;</span>
+            {% endif -%}
+            {%- if forloop.last -%}
+                <span class="current">
+                {%- if page.api -%}
+                <code>{{ page.title }}</code>
+                {%- else -%}
+                {{ page.title }}
+                {%- endif -%}
+                </span>
+                {%- if page.draft %}
+                    <span class="separator">&vert;</span>
+                    <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
+                {%- endif -%}
+            {%- else -%}
+                <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}">
+                    {%- if page.api -%}
+                    <code>{{ crumb }}</code>
+                    {%- else -%}
+                    {{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}
+                    {%- endif -%}
+                </a>
+                <span class="separator">&gt;</span>
+            {% endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+</div>

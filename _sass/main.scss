@@ -526,24 +526,24 @@ html {
   text-decoration: underline;
 }
 
-.wiki a:active {
-  color: red;
-}
-
-.wiki a:focus {
-  color: orange;
-}
-
-.wiki a:hover {
-  color: yellow;
-}
-
 .wiki a:link {
   color: blue;
 }
 
 .wiki a:visited {
   color: violet;
+}
+
+.wiki a:hover { /* after link and visited */
+  color: yellow;
+}
+
+.wiki a:active { /* after hover */
+  color: red;
+}
+
+.wiki a:focus {
+  color: orange;
 }
 
 .wiki-heading {

@@ -1,5 +1,5 @@
 <div class="breadcrumbs">
-    {%- if page.url == "/" -%}
+    {%- if page.url == "/" %}
         <span class="current">Home</span>
         {%- if page.draft %}
             <span class="separator">&vert;</span>
@@ -34,8 +34,8 @@
                     {%- endif -%}
                 </a>
                 <span class="separator">&gt;</span>
-                {%- assign crumb_path = crumb_path | append: crumb | append: "/" -%}
-            {% endif -%}
+                {%- assign crumb_path = crumb_path | append: crumb | append: "/" %}
+            {%- endif -%}
         {%- endfor -%}
-    {%- endif -%}
+    {%- endif %}
 </div>

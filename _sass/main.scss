@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #2f7d95;
+  text-decoration: none;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -31,17 +36,6 @@ html {
   padding: 0.5rem 1rem;
 }
 
-.breadcrumbs a {
-  color: #2f7d95;
-  text-decoration: none;
-}
-
-/*
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
-*/
-
 .content-bottom {
   height: 2rem;
 }
@@ -62,18 +56,6 @@ html {
   flex-direction: column;
   gap: 0.5rem;
 }
-
-.content-main a {
-  color: #2f7d95;
-  text-decoration: none;
-}
-
-/*
-.content-main a:focus,
-.content-main a:hover {
-  text-decoration: underline;
-}
-*/
 
 .content-main div.highlight {
   display: grid;
@@ -208,18 +190,6 @@ html {
   height: 2rem;
 }
 
-.external a {
-  color: #2f7d95;
-  text-decoration: none;
-}
-
-/*
-.external a:hover,
-.external a:focus {
-  text-decoration: underline;
-}
-*/
-
 .external-heading {
   font-size: 1.5rem;
   margin-top: 0;
@@ -242,15 +212,7 @@ html {
 
 .footer a {
   color: #888;
-  text-decoration: none;
 }
-
-/*
-.footer a:focus,
-.footer a:hover {
-  text-decoration: underline;
-}
-*/
 
 .footer-background {
   background-color: #eee;
@@ -327,19 +289,6 @@ html {
   gap: 0.5rem;
 }
 
-.group-entries a {
-  color: #2f7d95;
-  text-decoration: none;
-}
-
-/*
-.group-entries a:focus,
-.group-entries a:hover
-{
-  text-decoration: underline;  
-}
-*/
-
 .group-subtitle {
   color: #888;
 }
@@ -410,25 +359,6 @@ html {
   text-decoration: none;
 }
 
-/*
-.menu a:hover,
-.menu a:focus {
-  text-decoration: underline;
-}
-*/
-
-.seealso a {
-  color: #2f7d95;
-  text-decoration: none;
-}
-
-/*
-.seealso a:hover,
-.seealso a:focus {
-  text-decoration: underline;
-}
-*/
-
 .seealso-heading {
   font-size: 1.5rem;
   margin-top: 0;
@@ -496,18 +426,6 @@ html {
   border-left: 1px solid #aaa;
 }
 
-.toc a {
-  color: #2f7d95;
-  text-decoration: none;
-}
-
-/*
-.toc a:hover,
-.toc a:focus {
-  text-decoration: underline;
-}
-*/
-
 .toc-entries1 {
   display: flex;
   flex-direction: column;
@@ -531,38 +449,6 @@ html {
   font-size: 1.5rem;
   margin-top: 0;
 }
-
-.wiki a {
-  color: #2f7d95;
-  text-decoration: none;
-}
-
-/*
-.wiki a:hover,
-.wiki a:focus {
-  text-decoration: underline;
-}
-
-.wiki a:link {
-  color: blue;
-}
-
-.wiki a:visited {
-  color: violet;
-}
-
-.wiki a:hover {
-  color: yellow;
-}
-
-.wiki a:active {
-  color: red;
-}
-
-.wiki a:focus {
-  color: orange;
-}
-*/
 
 .wiki-heading {
   font-size: 1.5rem;

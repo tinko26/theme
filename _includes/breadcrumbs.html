@@ -26,19 +26,20 @@
                     <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
                 {%- endif -%}
             {%- else -%}
-                <a href="{{ crumb | prepend: crumb_path | relative_url }}">
+                {%- assign crumb_path_next = crumb_path | append: crumb -%}
+                <a href="{{ crumb_path_next | relative_url }}">
                 {%- assign crumb_api = page.api | default: false -%}
-                {%- if site.data.breadcrumbs.breadcrumbs[crumb] != nil -%}
-                    {%- if site.data.breadcrumbs.breadcrumbs[crumb].api != nil -%}
-                    {%- assign crumb_api = site.data.breadcrumbs.breadcrumbs[crumb].api -%}
+                {%- if site.data.breadcrumbs.breadcrumbs[crumb_path_next] != nil -%}
+                    {%- if site.data.breadcrumbs.breadcrumbs[crumb_path_next].api != nil -%}
+                    {%- assign crumb_api = site.data.breadcrumbs.breadcrumbs[crumb_path_next].api -%}
                     {%- endif -%}
                 {%- endif -%}
                 {%- assign crumb_title = crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize -%}
                 {%- assign crumb_title_api = crumb -%}
-                {%- if site.data.breadcrumbs.breadcrumbs[crumb] != nil -%}
-                    {%- if site.data.breadcrumbs.breadcrumbs[crumb].title != nil -%}
-                    {%- assign crumb_title = site.data.breadcrumbs.breadcrumbs[crumb].title -%}
-                    {%- assign crumb_title_api = site.data.breadcrumbs.breadcrumbs[crumb].title -%}
+                {%- if site.data.breadcrumbs.breadcrumbs[crumb_path_next] != nil -%}
+                    {%- if site.data.breadcrumbs.breadcrumbs[crumb_path_next].title != nil -%}
+                    {%- assign crumb_title = site.data.breadcrumbs.breadcrumbs[crumb_path_next].title -%}
+                    {%- assign crumb_title_api = site.data.breadcrumbs.breadcrumbs[crumb_path_next].title -%}
                     {%- endif -%}
                 {%- endif -%}
                 {%- if crumb_api -%}
@@ -48,7 +49,7 @@
                 {%- endif -%}
                 </a>
                 <span class="separator">&gt;</span>
-                {% assign crumb_path = crumb_path | append: crumb | append: "/" -%}
+                {% assign crumb_path = crumb_path_next | append: "/" -%}
             {%- endif -%}
         {%- endfor -%}
     {%- endif %}

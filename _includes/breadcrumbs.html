@@ -27,11 +27,22 @@
                 {%- endif -%}
             {%- else -%}
                 <a href="{{ crumb | prepend: crumb_path | relative_url }}">
+                {%- if site.data.breadcrumbs.breadcrumbs[crumb] -%}
+                    {%- assign crumb_api = site.data.breadcrumbs.breadcrumbs[crumb].api | default: page.api -%}
+                    {%- assign crumb_title_default = crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize -%}
+                    {%- assign crumb_title = site.data.breadcrumbs.breadcrumbs[crumb].title | default: crumb_title_default -%}
+                    {%- if crumb_api -%}
+                    <code>{{ crumb_title }}</code>
+                    {%- else -%}
+                    {{ crumb_title }}
+                    {%- endif -%}
+                {%- else -%}
                     {%- if page.api -%}
                     <code>{{ crumb }}</code>
                     {%- else -%}
                     {{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}
                     {%- endif -%}
+                {%- endif -%}
                 </a>
                 <span class="separator">&gt;</span>
                 {% assign crumb_path = crumb_path | append: crumb | append: "/" -%}

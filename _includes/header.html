@@ -1,18 +1,16 @@
 <div class="header-background">
     <div class="header">
-        {%- assign url_size = page.url | size | minus: 1 -%}
-        {%- assign url = page.url | truncate: url_size -%}
-        {%- assign crumbs = url | split: "/" -%}
-        {%- assign title = crumbs | last | replace: '-', ' ' | replace: '%20', ' ' | capitalize -%}
+        {%- assign crumbs = page.url | split: "/" -%}
+        {%- assign title = crumbs | last -%}
         {%- assign title_monospace = false -%}
-        {%- if site.data.page-titles.list[url] -%}
-            {%- assign title = site.data.page-titles.list[url] -%}
+        {%- if site.data.page-titles.list[page.url] -%}
+            {%- assign title = site.data.page-titles.list[page.url] -%}
         {%- endif -%}
         {%- if page.title -%}
             {%- assign title = page.title -%}
         {%- endif -%}
-        {%- if site.data.page-titles-monospace.list[url] != nil -%}
-            {%- assign title_monospace = site.data.page-titles-monospace.list[url] -%}
+        {%- if site.data.page-titles-monospace.list[page.url] != nil -%}
+            {%- assign title_monospace = site.data.page-titles-monospace.list[page.url] -%}
         {%- endif -%}
         {%- if title_monospace -%}
         <div class="title"><code>{{ title }}</code></div>

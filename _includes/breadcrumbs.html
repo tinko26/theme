@@ -13,7 +13,7 @@
                 <a href="{{ '/' | relative_url }}">Home</a>
                 <span class="separator">&gt;</span>
             {% endif -%}
-            {%- assign crumb_path_next = crumb_path | append: crumb -%}
+            {%- assign crumb_path_next = crumb_path | append: crumb | append: "/" -%}
             {%- if forloop.last -%}
                 {%- assign crumb_title = page.title -%}
                 {%- assign crumb_title_monospace = false -%}
@@ -35,7 +35,7 @@
                     <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
                 {%- endif -%}
             {%- else -%}
-                {%- assign crumb_title = crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize -%}
+                {%- assign crumb_title = crumb -%}
                 {%- assign crumb_title_monospace = false -%}
                 {%- if site.data.page-titles.list[crumb_path_next] -%}
                     {%- assign crumb_title = site.data.page-titles.list[crumb_path_next] -%}
@@ -52,7 +52,7 @@
                 </a>
                 <span class="separator">&gt;</span>
             {% endif -%}
-            {%- assign crumb_path = crumb_path_next | append: "/" -%}
+            {%- assign crumb_path = crumb_path_next -%}
         {%- endfor -%}
     {%- endif %}
 </div>

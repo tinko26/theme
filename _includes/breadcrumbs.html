@@ -1,6 +1,20 @@
 <div class="breadcrumbs">
     {% if page.url == "/" -%}
-        <span class="current">Home</span>
+        {%- assign crumb_title = "Home" -%}
+        {%- assign crumb_title_monospace = false -%}
+        {%- if site.data.page-titles["/"] -%}
+            {%- assign crumb_title = site.data.page-titles["/"] -%}
+        {%- endif -%}
+        {%- if site.data.page-titles-monospace["/"] != nil -%}
+            {%- assign crumb_title_monospace = site.data.page-titles-monospace["/"] -%}
+        {%- endif -%}
+        <span class="current">
+            {%- if crumb_title_monospace -%}
+            <code>{{ crumb_title }}</code>
+            {%- else -%}
+            {{ crumb_title }}
+            {%- endif -%}
+        </span>
         {%- if page.draft %}
             <span class="separator">&vert;</span>
             <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
@@ -10,7 +24,21 @@
         {%- assign crumbs = page.url | split: '/' -%}
         {%- for crumb in crumbs offset: 1 -%}
             {%- if forloop.first -%}
-                <a href="{{ '/' | relative_url }}">Home</a>
+                {%- assign crumb_title = "Home" -%}
+                {%- assign crumb_title_monospace = false -%}
+                {%- if site.data.page-titles["/"] -%}
+                    {%- assign crumb_title = site.data.page-titles["/"] -%}
+                {%- endif -%}
+                {%- if site.data.page-titles-monospace["/"] != nil -%}
+                    {%- assign crumb_title_monospace = site.data.page-titles-monospace["/"] -%}
+                {%- endif -%}
+                <a href="{{ '/' | relative_url }}">
+                    {%- if crumb_title_monospace -%}
+                    <code>{{ crumb_title }}</code>
+                    {%- else -%}
+                    {{ crumb_title }}
+                    {%- endif -%}
+                </a>
                 <span class="separator">&gt;</span>
             {% endif -%}
             {%- assign crumb_path_next = crumb_path | append: crumb | append: "/" -%}
@@ -23,9 +51,6 @@
                 {%- assign crumb_title_monospace = site.data.page-titles-monospace[crumb_path_next] -%}
             {%- endif -%}
             {%- if forloop.last -%}
-                {%- if page.title -%}
-                    {%- assign crumb_title = page.title -%}
-                {%- endif -%}
                 <span class="current">
                     {%- if crumb_title_monospace -%}
                     <code>{{ crumb_title }}</code>

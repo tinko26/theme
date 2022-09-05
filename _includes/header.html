@@ -1,17 +1,14 @@
+{%- assign crumbs = page.url | split: "/" -%}
+{%- assign title = crumbs | last -%}
+{%- assign title_monospace = false -%}
+{%- if site.data.page-titles[page.url] -%}
+    {%- assign title = site.data.page-titles[page.url] -%}
+{%- endif -%}
+{%- if site.data.page-titles-monospace[page.url] != nil -%}
+    {%- assign title_monospace = site.data.page-titles-monospace[page.url] -%}
+{%- endif -%}
 <div class="header-background">
     <div class="header">
-        {%- assign crumbs = page.url | split: "/" -%}
-        {%- assign title = crumbs | last -%}
-        {%- assign title_monospace = false -%}
-        {%- if site.data.page-titles[page.url] -%}
-            {%- assign title = site.data.page-titles[page.url] -%}
-        {%- endif -%}
-        {%- if page.title -%}
-            {%- assign title = page.title -%}
-        {%- endif -%}
-        {%- if site.data.page-titles-monospace[page.url] != nil -%}
-            {%- assign title_monospace = site.data.page-titles-monospace[page.url] -%}
-        {%- endif -%}
         {%- if title_monospace -%}
         <div class="title"><code>{{ title }}</code></div>
         <div class="subtitle">{{ page.subtitle }}</div>

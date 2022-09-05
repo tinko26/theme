@@ -2,7 +2,7 @@
     <div class="header">
         {%- assign url_size = page.url | size | minus: 1 -%}
         {%- assign url = page.url | truncate: url_size -%}
-        {%- assign title -%}
+        {%- assign title = "Untitled." -%}
         {%- assign title_monospace = false -%}
         {%- assign crumbs = page.url | split: "/" -%}
         {%- for crumb in crumbs -%}

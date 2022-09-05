@@ -1,11 +1,14 @@
 <div class="header-background">
     <div class="header">
-        {%- if page.api -%}
-        <div class="title"><code>{{ page.title }}</code></div>
-        <div class="subtitle">{{ page.subtitle }}</div>
-        {%- else -%}
-        <div class="title">{{ page.title }}</div>
-        <div class="subtitle">{{ page.subtitle }}</div>
-        {%- endif -%}
+        {%- assign url_size = page.url | size | minus: 1 -%}
+        {%- assign url = page.url | truncate: url_size -%}
+        {%- assign title -%}
+        {%- assign title_monospace = false -%}
+        {%- assign crumbs = page.url | split: "/" -%}
+        {%- for crumb in crumbs -%}
+        <div style="display: block">
+            {{ crumb }}
+        </div>
+        {%- endfor -%}
     </div>
 </div>

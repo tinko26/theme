@@ -1,7 +1,7 @@
 function menuOpen() {
-    document.getElementsByClassName("menu")[0].style.display = "flex";
+	$(".menu").css("display", "flex");
 }
 
 function menuClose() {
-    document.getElementsByClassName("menu")[0].style.display = "none";
+	$(".menu").css("display", "none");
 }

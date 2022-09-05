@@ -1,6 +1,5 @@
 <div class="header-background">
     <div class="header">
-        <div style="display: block">{{ page.url }}</div>
         {%- assign crumbs = page.url | split: "/" -%}
         {%- assign title = crumbs | last -%}
         {%- assign title_monospace = false -%}

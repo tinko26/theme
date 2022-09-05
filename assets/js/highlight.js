@@ -15,4 +15,11 @@ function highlight() {
 			.replaceAll('defined ', '<span class="cp-k">defined</span> ')
 		);
 	});
+	$(".language-c").each(function() {
+		$(this).html(
+			$(this)
+			.html()
+			.replaceAll('<span class="n">bool</span>', '<span class="kt">bool</span>')
+		);
+	});
 }

@@ -19,7 +19,8 @@ function highlight() {
 		$(this).html(
 			$(this)
 			.html()
-			.replaceAll('<span class="n">bool</span>', '<span class="kt">bool</span>')
+			.replaceAll('<span class="n">bool</span>', '<span class="n-k">bool</span>')
+			.replaceAll('<span class="nf">bool</span>', '<span class="nf-k">bool</span>')
 		);
 	});
 }

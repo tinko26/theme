@@ -17,11 +17,11 @@
             {%- if forloop.last -%}
                 {%- assign crumb_title = page.title -%}
                 {%- assign crumb_title_monospace = false -%}
-                {%- if site.data.page-titles.list[crumb_path_next] -%}
-                    {%- assign crumb_title = site.data.page-titles.list[crumb_path_next] -%}
+                {%- if site.data.page-titles[crumb_path_next] -%}
+                    {%- assign crumb_title = site.data.page-titles[crumb_path_next] -%}
                 {%- endif -%}
-                {%- if site.data.page-titles-monospace.list[crumb_path_next] != nil -%}
-                    {%- assign crumb_title_monospace = site.data.page-titles-monospace.list[crumb_path_next] -%}
+                {%- if site.data.page-titles-monospace[crumb_path_next] != nil -%}
+                    {%- assign crumb_title_monospace = site.data.page-titles-monospace[crumb_path_next] -%}
                 {%- endif -%}
                 <span class="current">
                     {%- if crumb_title_monospace -%}
@@ -37,11 +37,11 @@
             {%- else -%}
                 {%- assign crumb_title = crumb -%}
                 {%- assign crumb_title_monospace = false -%}
-                {%- if site.data.page-titles.list[crumb_path_next] -%}
-                    {%- assign crumb_title = site.data.page-titles.list[crumb_path_next] -%}
+                {%- if site.data.page-titles[crumb_path_next] -%}
+                    {%- assign crumb_title = site.data.page-titles[crumb_path_next] -%}
                 {%- endif -%}
-                {%- if site.data.page-titles-monospace.list[crumb_path_next] != nil -%}
-                    {%- assign crumb_title_monospace = site.data.page-titles-monospace.list[crumb_path_next] -%}
+                {%- if site.data.page-titles-monospace[crumb_path_next] != nil -%}
+                    {%- assign crumb_title_monospace = site.data.page-titles-monospace[crumb_path_next] -%}
                 {%- endif -%}
                 <a href="{{ crumb_path_next | relative_url }}">
                     {%- if crumb_title_monospace -%}

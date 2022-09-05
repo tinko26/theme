@@ -407,10 +407,6 @@ html {
   height: 2rem;
 }
 
-.sidebar-external {
-  border-left: 1px solid #aaa;
-}
-
 .sidebar-flex {
   display: flex;
   flex-direction: column;
@@ -494,7 +490,6 @@ html {
     font-size: 20px;
   }
 
-  .content-external,
   .content-groups,
   .content-seealso,
   .content-toc,

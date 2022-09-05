@@ -2,13 +2,24 @@
     <div class="header">
         {%- assign url_size = page.url | size | minus: 1 -%}
         {%- assign url = page.url | truncate: url_size -%}
-        {%- assign title = "Untitled." -%}
+        {%- assign crumbs = url | split: "/" -%}
+        {%- assign title = crumbs | last | replace: '-', ' ' | replace: '%20', ' ' | capitalize -%}
         {%- assign title_monospace = false -%}
-        {%- assign crumbs = page.url | split: "/" -%}
-        {%- for crumb in crumbs -%}
-        <div style="display: block">
-            {{ crumb }}
-        </div>
-        {%- endfor -%}
+        {%- if site.data.page-titles.list[url] -%}
+            {%- assign title = site.data.page-titles.list[url] -%}
+        {%- endif -%}
+        {%- if page.title -%}
+            {%- assign title = page.title -%}
+        {%- endif -%}
+        {%- if site.data.page-titles-monospace.list[url] != nil -%}
+            {%- assign title_monospace = site.data.page-titles-monospace.list[url] -%}
+        {%- endif -%}
+        {%- title_monospace -%}
+        <div class="title"><code>{{ title }}</code></div>
+        <div class="subtitle">{{ page.subtitle }}</div>
+        {%- else -%}
+        <div class="title">{{ title }}</div>
+        <div class="subtitle">{{ page.subtitle }}</div>
+        {%- endif -%}
     </div>
 </div>

@@ -1,6 +1,6 @@
 {%- assign E = site.data.menu -%}
 <div class="menu" onclick="menuClose()">
-    {%- for e in E %}
+    {% for e in E -%}
         {%- assign crumbs = e | split: "/" -%}
         {%- assign title = crumbs | last -%}
         {%- assign title_monospace = false -%}
@@ -17,5 +17,5 @@
             {{ title }}
             {%- endif -%}
         </a>
-    {%- endfor %}
+    {% endfor -%}
 </div>

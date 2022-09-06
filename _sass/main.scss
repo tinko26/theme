@@ -293,8 +293,6 @@ html {
 .group {
   display: flex;
   flex-direction: column;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .group-items {
@@ -509,6 +507,8 @@ html {
 
   .group {
     border-left: 1px solid #aaa;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

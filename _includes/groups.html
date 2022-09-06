@@ -3,11 +3,28 @@
         {%- assign items = site.data.group-items[group] -%}
         {%- assign title = site.data.group-titles[group] | default: "Group" -%}
         {%- assign subtitle = site.data.group-subtitles[group] %}
+        {%- assign url = site.data.group-urls[group] %}
         <div class="group">
-            {%- if include.sidebar -%}
-            <h1 class="group-title">{{ title }}</h1>
+            {%- if url -%}
+                {%- if url == page.url -%}
+                    {%- if include.sidebar -%}
+                    <h1 class="group-title-active">{{ title }}</h1>
+                    {%- else -%}
+                    <h1 class="group-title-active" id="page-group-{{ group }}">{{ title }}</h1>
+                    {%- endif -%}
+                {%- else -%}
+                    {%- if include.sidebar -%}
+                    <h1 class="group-title"><a href="{{ url }}">{{ title }}</a></h1>
+                    {%- else -%}
+                    <h1 class="group-title" id="page-group-{{ group }}"><a href="{{ url }}">{{ title }}</a></h1>
+                    {%- endif -%}
+            {%- endif -%}
             {%- else -%}
-            <h1 class="group-title" id="page-group-{{ group }}">{{ title }}</h1>
+                {%- if include.sidebar -%}
+                <h1 class="group-title">{{ title }}</h1>
+                {%- else -%}
+                <h1 class="group-title" id="page-group-{{ group }}">{{ title }}</h1>
+                {%- endif -%}
             {%- endif -%}
             {%- if subtitle %}
             <div class="group-subtitle">{{ subtitle }}</div>

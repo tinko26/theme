@@ -1,21 +1,52 @@
-{%- assign items1 = content | strip | split: '<h1' -%}
+{%- assign items1 = content | split: '<h1' -%}
 
-<div class="toc-items1">
-{%- for item1 in items1 offset: 1 -%}
+{%- if items1.size > 1 -%}
+    <div class="toc-items1">
+        {%- for item1 in items1 offset: 1 -%}
 
-    {%- assign id1 = item1 -%}
+            {%- assign id1 = item1 -%}
 
-    {%- assign id1 = id1    | split: 'id="' -%}
-    {%- assign id1 = id1[1] | split: '"' -%}
-    {%- assign id1 = id1[0] | split: '"' -%}
+            {%- assign id1 = id1    | split: 'id="' -%}
+            {%- assign id1 = id1[1] | split: '"' -%}
+            {%- assign id1 = id1[0] | split: '"' -%}
 
-    {%- assign name1 = item1 -%}
+            {%- assign name1 = item1 -%}
 
-    {%- assign name1 = name1 | split: '>' -%}
-    {%- assign name1 = name1[1] | split: '</' -%}
-    {%- assign name1 = name1[0] -%}
+            {%- assign name1 = name1 | split: '>' -%}
+            {%- assign name1 = name1[1] | split: '</h1' -%}
+            {%- assign name1 = name1[0] -%}
 
-    <span>{{ id1 }} = {{ name1 }}</span>
+            {%- assign items2 = item1 | split: '<h2' -%}
 
-{%- endfor -%}
-</div>
+            <div class="toc-item1">
+                <a href="#{{ id1 }}">{{ name1 }}</a>
+
+                {%- if items2.size > 1 -%}
+                    <div class="toc-items2">
+                        {%- for item2 in items2 offset: 1 -%}
+
+                            {%- assign id2 = item2 -%}
+
+                            {%- assign id2 = id2    | split: 'id="' -%}
+                            {%- assign id2 = id2[1] | split: '"' -%}
+                            {%- assign id2 = id2[0] | split: '"' -%}
+                
+                            {%- assign name2 = item2 -%}
+                
+                            {%- assign name2 = name2 | split: '>' -%}
+                            {%- assign name2 = name2[1] | split: '</h2' -%}
+                            {%- assign name2 = name2[0] -%}
+
+                            <div class="toc-item2">
+                                <a href="#{{ id2 }}">{{ name2 }}</a>
+                            </div>
+            
+                        {%- endfor -%}
+                    </div>
+                {%- endif -%}
+
+            </div>
+
+        {%- endfor -%}
+    </div>
+{%- endif -%}

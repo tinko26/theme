@@ -1,8 +1,23 @@
 <div class="seealso">
     <h1 class="seealso-heading">See Also</h1>
     <div class="seealso-links">
-        {%- for link in page.seealso -%}
-            <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
-        {%- endfor -%}
+        {%- for url in page.seealso -%}
+            {%- assign crumbs = url | split: "/" -%}
+            {%- assign title = crumbs | last -%}
+            {%- assign title_monospace = false -%}
+            {%- if site.data.page-titles[url] -%}
+                {%- assign title = site.data.page-titles[url] -%}
+            {%- endif -%}
+            {%- if site.data.page-titles-monospace[url] != nil -%}
+                {%- assign title_monospace = site.data.page-titles-monospace[url] -%}
+            {%- endif %}
+            <a href="{{ url | relative_url }}">
+                {%- if title_monospace -%}
+                <code>{{ title }}</code>
+                {%- else -%}
+                {{ title }}
+                {%- endif -%}
+            </a>
+        {%- endfor %}
     </div>
 </div>

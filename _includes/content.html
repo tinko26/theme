@@ -9,6 +9,11 @@
         <div class="content-main">
             {{ content }}
         </div>
+        {%- if page.external -%}
+        <div class="content-external">
+            {% include external.html %}
+        </div>
+        {%- endif -%}
         {%- if page.seealso -%}
         <div class="content-seealso">
             {% include seealso.html %}

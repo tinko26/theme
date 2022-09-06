@@ -35,10 +35,18 @@
                 
                             {%- assign name2 = item2 -%}
 
-                            {%- assign name2 = name2 | remove_first: '>' -%}
+                            {%- assign name2 = name2 | split: '>' -%}
+
+                            {%- assign name2l = name2.size | minus: 2 -%}
+
+
+
+
+                            {%- assign name2 = name2 | slice: 1, name2l -%}
+                            {%- assign name2 = name2 | join: '>' -%}
                             {%- assign name2 = name2 | split: '</h2' -%}
                             {%- assign name2 = name2 | first -%}
-                
+                                
                             <div class="toc-item2">
                                 <a href="#{{ id2 }}">{{ name2 }}</a>
                             </div>

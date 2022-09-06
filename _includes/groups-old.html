@@ -1,0 +1,22 @@
+<div class="groups">
+{%- for g in page.groups -%}
+{%- assign G = site.data.groups[g] -%}
+<div class="group">
+  <h1 class="group-title">{{ G.title }}</h1>
+  {%- if G.subtitle -%}
+  <div class="group-subtitle">{{ G.subtitle }}</div>
+  {%- endif -%}
+  {%- if G.entries -%}
+  <div class="group-items">
+    {%- for e in G.list -%}
+      {%- if e.url == page.url -%}
+        <div class="group-active">{{ e.title }}</div>
+      {%- else -%}
+        <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+</div>
+{%- endfor -%}
+</div>

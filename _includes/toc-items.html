@@ -34,10 +34,8 @@
                             {%- assign id2 = id2[0] -%}
                 
                             {%- assign name2 = item2 -%}
-                
-                            {%- assign name2 = name2 | split: '>' -%}
-                            {%- assign name2 = name2 | slice: 1 -%}
-                            {%- assign name2 = name2 | join: '>' -%}
+
+                            {%- assign name2 = name2 | remove_first: '>' -%}
                             {%- assign name2 = name2 | split: '</h2' -%}
                             {%- assign name2 = name2 | first -%}
                 

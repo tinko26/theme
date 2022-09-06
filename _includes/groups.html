@@ -14,11 +14,11 @@
                     {%- endif -%}
                 {%- else -%}
                     {%- if include.sidebar -%}
-                    <h1 class="group-title"><a href="{{ url }}">{{ title }}</a></h1>
+                    <h1 class="group-title"><a href="{{ url | relative_url }}">{{ title }}</a></h1>
                     {%- else -%}
-                    <h1 class="group-title" id="page-group-{{ group }}"><a href="{{ url }}">{{ title }}</a></h1>
+                    <h1 class="group-title" id="page-group-{{ group }}"><a href="{{ url | relative_url }}">{{ title }}</a></h1>
                     {%- endif -%}
-            {%- endif -%}
+                {%- endif -%}
             {%- else -%}
                 {%- if include.sidebar -%}
                 <h1 class="group-title">{{ title }}</h1>

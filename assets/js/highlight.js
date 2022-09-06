@@ -27,7 +27,7 @@ function highlight() {
 		$(this).html(
 			$(this)
 			.html()
-			.replace(/<span class="n">.+_t<\/span>/g, function replace(x) { 
+			.replaceAll(/<span class="n">.+_t<\/span>/g, function replace(x) { 
 				return '<span class="n-t">' + x.substring(16); 
 			})
 		);

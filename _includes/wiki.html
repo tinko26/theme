@@ -1,8 +1,10 @@
 <div class="wiki">
     <h1 class="wiki-heading">Wikipedia</h1>
     <div class="wiki-links">
-        {%- for link in page.wiki -%}
-            <a href="{{ link.url }}" target="_blank">{{ link.title }}</a>
-        {%- endfor -%}
+        {%- for wiki in page.wiki -%}
+            {%- assign title = site.data.wiki-titles[wiki] -%}
+            {%- assign url = site.data.wiki-urls[wiki] %}
+            <a href="{{ url }}" target="_blank">{{ title }}</a>
+        {%- endfor %}
     </div>
 </div>

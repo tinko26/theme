@@ -396,6 +396,8 @@ html {
 }
 
 .sidebar {
+  max-height: 100vh;
+  overflow-y: auto;
   position: sticky;
   top: 0;
 }

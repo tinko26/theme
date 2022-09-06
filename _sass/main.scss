@@ -296,7 +296,6 @@ html {
   gap: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  border-left: 1px solid #aaa;
 }
 
 .group-items {
@@ -506,6 +505,10 @@ html {
     display: block;
     grid-column: 2;
     grid-row: 1;
+  }
+
+  .group {
+    border-left: 1px solid #aaa;
   }
 }
 

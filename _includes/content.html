@@ -1,49 +1,49 @@
 <div class="content">
     <div class="content-top"></div>
     <div class="content-flex">
-        {%- if page.toc -%}
+        {%- if page.toc %}
         <div class="content-toc">
             {% include toc.html %}
         </div>
-        {%- endif -%}
+        {%- endif %}
         <div class="content-main">
             {{ content }}
         </div>
-        {%- if page.external -%}
+        {%- if page.external %}
         <div class="content-external">
             {% include external.html %}
         </div>
         {%- endif -%}
-        {%- if page.seealso -%}
+        {%- if page.seealso %}
         <div class="content-seealso">
             {% include seealso.html %}
         </div>
         {%- endif -%}
-        {%- if page.wiki -%}
+        {%- if page.wiki %}
         <div class="content-wiki">
             {% include wiki.html %}
         </div>
         {%- endif -%}
-        {%- if page.groups -%}
+        {%- if page.groups %}
         <div class="content-groups">
             {% include groups.html %}
         </div>
-        {%- endif -%}
+        {%- endif %}
         <div class="content-footer">
-            {%- if page.last_modified_at -%}
+            {%- if page.last_modified_at %}
             <div class="content-date">
                 <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.last_modified_at | date: "%B %-d, %Y" }}
             </div>
-            {%- elsif page.date -%}
+            {%- elsif page.date %}
             <div class="content-date">
                 <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.date | date: "%B %-d, %Y" }}
             </div>
             {%- endif -%}
-            {%- if page.draft -%}
+            {%- if page.draft %}
             <div class="content-draft">
                 <i class="fas fa-fw fa-person-digging" aria-hidden="true"></i> This page is under construction.
             </div>
-            {%- endif -%}
+            {%- endif %}
         </div>
     </div>
     <div class="content-bottom"></div>

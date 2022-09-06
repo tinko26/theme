@@ -2,9 +2,9 @@
     <h1 class="external-heading">External Links</h1>
     <div class="external-links">
         {%- for item in page.external -%}
-            {%- for pair in item -%}
+            {%- for pair in item %}
                 <a href="{{ pair[0] }}" target="_blank">{{ pair[1] }}</a>
             {%- endfor -%}
-        {%- endfor -%}
+        {%- endfor %}
     </div>
 </div>

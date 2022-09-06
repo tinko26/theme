@@ -435,28 +435,28 @@ html {
   border-left: 1px solid #aaa;
 }
 
-.toc-entries1 {
+.toc-heading {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.toc-item1 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.toc-entries2 {
+.toc-items1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toc-items2 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 1rem;
-}
-
-.toc-entry1 {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.toc-heading {
-  font-size: 1.5rem;
-  margin-top: 0;
 }
 
 .wiki-heading {

@@ -1,60 +1,82 @@
-{%- assign author = site.author -%}
+{%- assign description = site.data.page-descritpions[page.url] -%}
 
-{%- assign description = page.description | default: page.excerpt | default: site.description -%}
+{%- assign description = description | default: site.description -%}
+{%- assign description = description | markdownify -%}
+{%- assign description = description | strip_html -%}
+{%- assign description = description | newline_to_br -%}
+{%- assign description = description | strip_newlines -%}
+{%- assign description = description | replace: '<br />', ' ' -%}
+{%- assign description = description | escape_once -%}
+{%- assign description = description | strip -%}
 
-{%- assign description = description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | strip -%}
+{%- assign locale = site.locale -%}
 
-{%- assign locale = site.locale | replace: "-", "_" | default: "en_US" -%}
+{%- assign locale = locale | replace: "-", "_" -%}
+{%- assign locale = locale | default: "en_US" -%}
 
-{%- assign site_name = site.title -%}
+{%- assign title0 = site.title -%}
 
-{%- assign title_plain = page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- assign title1 = site.data.page-titles[page.url] -%}
 
-{%- assign title_separator = '&#124;' -%}
+{%- assign title1 = title1 | default: title0 -%}
 
-{%- assign title = page.title -%}
+{%- assign title2 = title1 -%}
 
-{%- assign title = title | append: " " -%}
-{%- assign title = title | append: title_separator -%}
-{%- assign title = title | append: " " -%}
-{%- assign title = title | append: site.title -%}
+{%- assign title2 = title2 | markdownify -%}
+{%- assign title2 = title2 | strip_html -%}
+{%- assign title2 = title2 | strip_newlines -%}
+{%- assign title2 = title2 | escape_once -%}
 
-{%- assign title = title | markdownify -%}
-{%- assign title = title | strip_html -%}
-{%- assign title = title | strip_newlines -%}
-{%- assign title = title | escape_once -%}
+{%- assign title3 = title1 -%}
 
-{%- assign title = title | default: site.title -%}
+{%- assign title3 = title3 | append: " " -%}
+{%- assign title3 = title3 | append: '&#124;' -%}
+{%- assign title3 = title3 | append: " " -%}
+{%- assign title3 = title3 | append: title0 -%}
 
-{%- assign url = site.url | append: site.baseurl -%}
+{%- assign title3 = title3 | markdownify -%}
+{%- assign title3 = title3 | strip_html -%}
+{%- assign title3 = title3 | strip_newlines -%}
+{%- assign title3 = title3 | escape_once -%}
 
-{%- assign url_canonical = page.url | replace: "index.html", "" | absolute_url %}
+{%- assign title3 = title3 | default: title0 -%}
+
+{%- assign url_page = page.url -%}
+
+{%- assign url_page_canonical = url_page -%}
+
+{%- assign url_page_canonical = url_page_canonical | replace: "index.html", "" -%}
+{%- assign url_page_canonical = url_page_canonical | absolute_url -%}
+
+{%- assign url_site = site.url -%}
+
+{%- assign url_site = url_site | append: site.baseurl -%}
 
 <head>
-    <title>{{ title }}</title>
+    <title>{{ title3 }}</title>
 
     <meta charset="utf-8" />
 
-    <meta name="author" content="{{ author }}" />
+    <meta name="author" content="{{ site.author }}" />
     <meta name="description" content="{{ description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="article:author" content="{{ author }}" />
-    {% if page.last_modified_at %}
+    <meta property="article:author" content="{{ site.author }}" />
+    {%- if page.last_modified_at %}
     <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}" />
-    {% endif %}
-    {% if page.date %}
+    {%- endif -%}
+    {%- if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
-    {% endif %}
+    {%- endif %}
 
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:locale" content="{{ locale }}" />
-    <meta property="og:site_name" content="{{ site_name }}" />
-    <meta property="og:title" content="{{ title_plain }}" />
+    <meta property="og:site_name" content="{{ title0 }}" />
+    <meta property="og:title" content="{{ title2 }}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ url_canonical }}" />
+    <meta property="og:url" content="{{ url_page_canonical }}" />
 
-    <link rel="canonical" href="{{ url_canonical }}" />
+    <link rel="canonical" href="{{ url_page_canonical }}" />
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 
@@ -65,10 +87,10 @@
 
     <script type="application/ld+json">
         {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": {{ site.author | jsonify }},
-        "url": {{ site.author_url | jsonify }}
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": {{ site.author | jsonify }},
+            "url": {{ site.author_url | jsonify }}
         }
     </script>
 

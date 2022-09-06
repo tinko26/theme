@@ -30,6 +30,9 @@ function highlight() {
 			.replace(/<span class="n">[a-zA-Z_][a-zA-Z0-9_]*_t<\/span>/g, function replace(x) { 
 				return '<span class="n-t">' + x.substr(16); 
 			})
+			.replace(/<span class="kt">[a-zA-Z_][a-zA-Z0-9_]*_t<\/span>/g, function replace(x) { 
+				return '<span class="kt-t">' + x.substr(17); 
+			})
 		);
 	});
 }

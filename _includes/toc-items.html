@@ -2,18 +2,22 @@
 
 {%- if items1.size > 1 -%}
     <div class="toc-items1">
+
         {%- for item1 in items1 offset: 1 -%}
 
             {%- assign id1 = item1 -%}
 
             {%- assign id1 = id1    | split: 'id="' -%}
             {%- assign id1 = id1[1] | split: '"' -%}
-            {%- assign id1 = id1[0] -%}
+            {%- assign id1 = id1    | first -%}
 
             {%- assign name1 = item1 -%}
 
             {%- assign name1 = name1 | split: '>' -%}
-            {%- assign name1 = name1 | slice: 1 -%}
+
+            {%- assign i = name1.size | minus: 2 -%}
+            
+            {%- assign name1 = name1 | slice: 1, i -%}
             {%- assign name1 = name1 | join: '>' -%}
             {%- assign name1 = name1 | split: '</h1' -%}
             {%- assign name1 = name1 | first -%}
@@ -31,18 +35,15 @@
 
                             {%- assign id2 = id2    | split: 'id="' -%}
                             {%- assign id2 = id2[1] | split: '"' -%}
-                            {%- assign id2 = id2[0] -%}
+                            {%- assign id2 = id2    | first -%}
                 
                             {%- assign name2 = item2 -%}
 
                             {%- assign name2 = name2 | split: '>' -%}
 
-                            {%- assign name2l = name2.size | minus: 2 -%}
+                            {%- assign i = name2.size | minus: 2 -%}
 
-
-
-
-                            {%- assign name2 = name2 | slice: 1, name2l -%}
+                            {%- assign name2 = name2 | slice: 1, i -%}
                             {%- assign name2 = name2 | join: '>' -%}
                             {%- assign name2 = name2 | split: '</h2' -%}
                             {%- assign name2 = name2 | first -%}
@@ -58,5 +59,36 @@
             </div>
 
         {%- endfor -%}
+
+        {%- if page.seealso or page.wiki or page.external or page.groups -%}
+
+        <div class="toc-item1-separator"></div>
+
+        {%- if page.seealso -%}
+        <div class="toc-item1">
+            <a href="#page-seealso">See Also</a>
+        </div>
+        {%- endif -%}
+
+        {%- if page.wiki -%}
+        <div class="toc-item1">
+            <a href="#page-wiki">Wikipedia</a>
+        </div>
+        {%- endif -%}
+
+        {%- if page.external -%}
+        <div class="toc-item1">
+            <a href="#page-external">External Links</a>
+        </div>
+        {%- endif -%}
+
+        {%- if page.groups -%}
+        <div class="toc-item1">
+            <a href="#page-groups">Groups</a>
+        </div>
+        {%- endif -%}
+
+        {%- endif -%}
+
     </div>
 {%- endif -%}

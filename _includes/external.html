@@ -1,5 +1,9 @@
 <div class="external">
+    {%- if include.id %}
+    <h1 class="external-heading" id="page-external">External Links</h1>
+    {%- else %}
     <h1 class="external-heading">External Links</h1>
+    {%- endif %}
     <div class="external-links">
         {%- for item in page.external -%}
             {%- for pair in item %}

@@ -9,24 +9,24 @@
         <div class="content-main">
             {{ content }}
         </div>
-        {%- if page.external %}
-        <div class="content-external">
-            {% include external.html %}
-        </div>
-        {%- endif -%}
         {%- if page.seealso %}
         <div class="content-seealso">
-            {% include seealso.html %}
+            {% include seealso.html id = true %}
         </div>
         {%- endif -%}
         {%- if page.wiki %}
         <div class="content-wiki">
-            {% include wiki.html %}
+            {% include wiki.html id = true %}
+        </div>
+        {%- endif -%}
+        {%- if page.external %}
+        <div class="content-external">
+            {% include external.html id = true %}
         </div>
         {%- endif -%}
         {%- if page.groups %}
         <div class="content-groups">
-            {% include groups.html %}
+            {% include groups.html id = true %}
         </div>
         {%- endif %}
         <div class="content-footer">

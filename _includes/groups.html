@@ -1,4 +1,8 @@
+{%- if include.id %}
+<div class="groups" id="page-groups">
+{%- else %}
 <div class="groups">
+{%- endif %}
     {%- for group in page.groups -%}
       {%- assign items = site.data.group-items[group] -%}
       {%- assign title = site.data.group-titles[group] | default: "Group" -%}

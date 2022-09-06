@@ -1,7 +1,7 @@
-{%- if include.id %}
-<div class="groups" id="page-groups">
-{%- else %}
+{%- if include.sidebar %}
 <div class="groups">
+{%- else %}
+<div class="groups" id="page-groups">
 {%- endif %}
     {%- for group in page.groups -%}
       {%- assign items = site.data.group-items[group] -%}

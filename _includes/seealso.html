@@ -1,8 +1,8 @@
 <div class="seealso">
-    {%- if include.id %}
-    <h1 class="seealso-heading" id="page-seealso">See Also</h1>
-    {%- else %}
+    {%- if include.sidebar %}
     <h1 class="seealso-heading">See Also</h1>
+    {%- else %}
+    <h1 class="seealso-heading" id="page-seealso">See Also</h1>
     {%- endif %}
     <div class="seealso-links">
         {%- for url in page.seealso -%}

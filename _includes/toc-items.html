@@ -60,30 +60,36 @@
 
         {%- endfor -%}
 
-        {%- if page.seealso or page.wiki or page.external or page.groups -%}
+        {%- if include.sidebar -%}
 
-        <div class="toc-item1-separator"></div>
+        {%- if page.external -%}
+        <div class="toc-item1-appendix">
+            <a href="#page-external">External Links</a>
+        </div>
+        {%- endif -%}
+
+        {%- else -%}
 
         {%- if page.seealso -%}
-        <div class="toc-item1">
+        <div class="toc-item1-appendix">
             <a href="#page-seealso">See Also</a>
         </div>
         {%- endif -%}
 
         {%- if page.wiki -%}
-        <div class="toc-item1">
+        <div class="toc-item1-appendix">
             <a href="#page-wiki">Wikipedia</a>
         </div>
         {%- endif -%}
 
         {%- if page.external -%}
-        <div class="toc-item1">
+        <div class="toc-item1-appendix">
             <a href="#page-external">External Links</a>
         </div>
         {%- endif -%}
 
         {%- if page.groups -%}
-        <div class="toc-item1">
+        <div class="toc-item1-appendix">
             <a href="#page-groups">Groups</a>
         </div>
         {%- endif -%}

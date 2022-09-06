@@ -3,22 +3,22 @@
     <div class="sidebar-flex">
         {%- if page.toc -%}
         <div class="sidebar-toc">
-            {% include toc.html %}
+            {% include toc.html sidebar = true %}
         </div>
         {%- endif -%}
         {%- if page.seealso -%}
         <div class="sidebar-seealso">
-            {% include seealso.html %}
+            {% include seealso.html sidebar = true %}
         </div>
         {%- endif -%}
         {%- if page.wiki -%}
         <div class="sidebar-wiki">
-            {% include wiki.html %}
+            {% include wiki.html sidebar = true %}
         </div>
         {%- endif -%}
         {%- if page.groups -%}
         <div class="sidebar-groups">
-            {% include groups.html %}
+            {% include groups.html sidebar = true %}
         </div>
         {%- endif -%}
         <div class="sidebar-footer"></div>

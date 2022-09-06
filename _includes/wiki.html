@@ -1,8 +1,8 @@
 <div class="wiki">
-    {%- if include.id %}
-    <h1 class="wiki-heading" id="page-wiki">Wikipedia</h1>
-    {%- else %}
+    {%- if include.sidebar %}
     <h1 class="wiki-heading">Wikipedia</h1>
+    {%- else %}
+    <h1 class="wiki-heading" id="page-wiki">Wikipedia</h1>
     {%- endif %}
     <div class="wiki-items">
         {%- for wiki in page.wiki -%}

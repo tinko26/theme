@@ -1,4 +1,17 @@
-{%- assign description = site.data.page-descritpions[page.url] -%}
+{%- assign url_site = site.url -%}
+
+{%- assign url_site = url_site | append: site.baseurl -%}
+
+{%- assign url_page = page.url -%}
+
+{%- assign url_page_canonical = url_page -%}
+
+{%- assign url_page_canonical = url_page_canonical | replace: "index.html", "" -%}
+{%- assign url_page_canonical = url_page_canonical | absolute_url -%}
+
+{%- assign url_page_crumbs = url_page | split: "/" -%}
+
+{%- assign description = site.data.page-descriptions[page.url] -%}
 
 {%- assign description = description | default: site.description -%}
 {%- assign description = description | markdownify -%}
@@ -16,7 +29,9 @@
 
 {%- assign title0 = site.title -%}
 
-{%- assign title1 = site.data.page-titles[page.url] -%}
+{%- assign title1 = url_page_crumbs | last -%}
+
+{%- assign title1 = site.data.page-titles[url_page] | default: title1 -%}
 
 {%- assign title1 = title1 | default: title0 -%}
 
@@ -40,17 +55,6 @@
 {%- assign title3 = title3 | escape_once -%}
 
 {%- assign title3 = title3 | default: title0 -%}
-
-{%- assign url_page = page.url -%}
-
-{%- assign url_page_canonical = url_page -%}
-
-{%- assign url_page_canonical = url_page_canonical | replace: "index.html", "" -%}
-{%- assign url_page_canonical = url_page_canonical | absolute_url -%}
-
-{%- assign url_site = site.url -%}
-
-{%- assign url_site = url_site | append: site.baseurl -%}
 
 <head>
     <title>{{ title3 }}</title>

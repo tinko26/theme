@@ -1,20 +1,15 @@
 {%- assign urls = site.data.menu -%}
-
 <div class="menu" onclick="menuClose()">
-    {% for url in urls -%}
-
+    {%- for url in urls -%}
         {%- assign crumbs = url | split: "/" -%}
-
         {%- assign title = crumbs | last -%}
         {%- assign title_monospace = false -%}
-
         {%- if site.data.page-titles[url] -%}
             {%- assign title = site.data.page-titles[url] -%}
         {%- endif -%}
         {%- if site.data.page-titles-monospace[url] != nil -%}
             {%- assign title_monospace = site.data.page-titles-monospace[url] -%}
-        {%- endif -%}
-
+        {%- endif %}
         <a href="{{ url | relative_url }}">
             {%- if title_monospace -%}
             <code>{{ title }}</code>
@@ -22,6 +17,5 @@
             {{ title }}
             {%- endif -%}
         </a>
-        
     {%- endfor %}
 </div>

@@ -23,4 +23,13 @@ function highlight() {
 			.replaceAll('<span class="nf">bool</span>', '<span class="nf-k">bool</span>')
 		);
 	});
+	$(".language-c").each(function() {
+		$(this).html(
+			$(this)
+			.html()
+			.replace(/<span class="n">.+_t<\/span>/g, function replace(x) { 
+				return '<span class="n-t">' + x.substring(16); 
+			})
+		);
+	});
 }

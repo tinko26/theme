@@ -1,49 +1,49 @@
-{%- if include.sidebar %}
 <div class="groups">
-{%- else %}
-<div class="groups" id="page-groups">
-{%- endif %}
     {%- for group in page.groups -%}
-      {%- assign items = site.data.group-items[group] -%}
-      {%- assign title = site.data.group-titles[group] | default: "Group" -%}
-      {%- assign subtitle = site.data.group-subtitles[group] %}
-      <div class="group">
-          <h1 class="group-title">{{ title }}</h1>
-          {%- if subtitle %}
-          <div class="group-subtitle">{{ subtitle }}</div>
-          {%- endif -%}
-          {%- if items %}
-          <div class="group-items">
-              {%- for item in items -%}
-                  {%- assign crumbs = item | split: "/" -%}
-                  {%- assign title = crumbs | last -%}
-                  {%- assign title_monospace = false -%}
-                  {%- if site.data.page-titles[item] -%}
-                      {%- assign title = site.data.page-titles[item] -%}
-                  {%- endif -%}
-                  {%- if site.data.page-titles-monospace[item] != nil -%}
-                      {%- assign title_monospace = site.data.page-titles-monospace[item] -%}
-                  {%- endif %}
-                  {%- if item == page.url %}
-                  <div class="group-active">
-                      {%- if title_monospace -%}
-                      <code>{{ title }}</code>
-                      {%- else -%}
-                      {{ title }}
-                      {%- endif -%}
-                  </div>
-                  {%- else %}
-                  <a href="{{ item | relative_url }}">
-                      {%- if title_monospace -%}
-                      <code>{{ title }}</code>
-                      {%- else -%}
-                      {{ title }}
-                      {%- endif -%}
-                  </a>
-                  {%- endif -%}
-              {%- endfor %}
-          </div>
-          {%- endif %}
-      </div>
+        {%- assign items = site.data.group-items[group] -%}
+        {%- assign title = site.data.group-titles[group] | default: "Group" -%}
+        {%- assign subtitle = site.data.group-subtitles[group] %}
+        <div class="group">
+            {%- if include.sidebar -%}
+            <h1 class="group-title">{{ title }}</h1>
+            {%- else -%}
+            <h1 class="group-title" id="page-group-{{ group }}">{{ title }}</h1>
+            {%- endif -%}
+            {%- if subtitle %}
+            <div class="group-subtitle">{{ subtitle }}</div>
+            {%- endif -%}
+            {%- if items %}
+            <div class="group-items">
+                {%- for item in items -%}
+                    {%- assign crumbs = item | split: "/" -%}
+                    {%- assign title = crumbs | last -%}
+                    {%- assign title_monospace = false -%}
+                    {%- if site.data.page-titles[item] -%}
+                        {%- assign title = site.data.page-titles[item] -%}
+                    {%- endif -%}
+                    {%- if site.data.page-titles-monospace[item] != nil -%}
+                        {%- assign title_monospace = site.data.page-titles-monospace[item] -%}
+                    {%- endif %}
+                    {%- if item == page.url %}
+                    <div class="group-active">
+                        {%- if title_monospace -%}
+                        <code>{{ title }}</code>
+                        {%- else -%}
+                        {{ title }}
+                        {%- endif -%}
+                    </div>
+                    {%- else %}
+                    <a href="{{ item | relative_url }}">
+                        {%- if title_monospace -%}
+                        <code>{{ title }}</code>
+                        {%- else -%}
+                        {{ title }}
+                        {%- endif -%}
+                    </a>
+                    {%- endif -%}
+                {%- endfor %}
+            </div>
+            {%- endif %}
+        </div>
     {%- endfor %}
 </div>

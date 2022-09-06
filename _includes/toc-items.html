@@ -63,7 +63,7 @@
         {%- if include.sidebar -%}
 
         {%- if page.external -%}
-        <div class="toc-item1-appendix">
+        <div class="toc-item1-links">
             <a href="#page-external">External Links</a>
         </div>
         {%- endif -%}
@@ -71,27 +71,30 @@
         {%- else -%}
 
         {%- if page.seealso -%}
-        <div class="toc-item1-appendix">
+        <div class="toc-item1-links">
             <a href="#page-seealso">See Also</a>
         </div>
         {%- endif -%}
 
         {%- if page.wiki -%}
-        <div class="toc-item1-appendix">
+        <div class="toc-item1-links">
             <a href="#page-wiki">Wikipedia</a>
         </div>
         {%- endif -%}
 
         {%- if page.external -%}
-        <div class="toc-item1-appendix">
+        <div class="toc-item1-links">
             <a href="#page-external">External Links</a>
         </div>
         {%- endif -%}
 
         {%- if page.groups -%}
-        <div class="toc-item1-appendix">
-            <a href="#page-groups">Groups</a>
-        </div>
+        {%- for group in page.groups -%}
+            {%- assign group_title = site.data.group-titles[group] | default: "Group" -%}
+            <div class="toc-item1-group">
+                <a href="#page-group-{{ group }}">{{ group_title }}</a>
+            </div>
+        {%- endfor -%}
         {%- endif -%}
 
         {%- endif -%}

@@ -1,12 +1,10 @@
 <div class="groups">
     {%- for group in page.groups -%}
       {%- assign items = site.data.group-items[group] -%}
-      {%- assign title = site.data.group-titles[group] -%}
+      {%- assign title = site.data.group-titles[group] | default: "Group" -%}
       {%- assign subtitle = site.data.group-subtitles[group] %}
       <div class="group">
-          {%- if title %}
           <h1 class="group-title">{{ title }}</h1>
-          {%- endif -%}
           {%- if subtitle %}
           <div class="group-subtitle">{{ subtitle }}</div>
           {%- endif -%}

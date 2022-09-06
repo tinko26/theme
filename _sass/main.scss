@@ -293,7 +293,6 @@ html {
 .group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -306,6 +305,7 @@ html {
 
 .group-subtitle {
   color: #888;
+  margin-bottom: 0.5rem;
 }
 
 .group-title {

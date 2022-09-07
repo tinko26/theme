@@ -14,9 +14,9 @@
             {% include seealso.html %}
         </div>
         {%- endif -%}
-        {%- if page.wiki %}
-        <div class="content-wiki">
-            {% include wiki.html %}
+        {%- if page.external-wiki %}
+        <div class="content-external-wiki">
+            {% include external-wiki.html %}
         </div>
         {%- endif -%}
         {%- if page.external %}

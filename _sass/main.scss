@@ -225,6 +225,17 @@ html {
   gap: 0.5rem;
 }
 
+.external-wiki-heading {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.external-wiki-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .footer {
   color: #888;
   font-size: 0.9rem;
@@ -431,20 +442,12 @@ html {
   height: 0;
 }
 
-.sidebar-seealso {
-  border-left: 1px solid #aaa;
-}
-
 .sidebar-toc {
   border-left: 1px solid #aaa;
 }
 
 .sidebar-top {
   height: 2rem;
-}
-
-.sidebar-wiki {
-  border-left: 1px solid #aaa;
 }
 
 .toc-heading {
@@ -486,17 +489,6 @@ html {
   margin-left: 1rem;
 }
 
-.wiki-heading {
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-
-.wiki-items {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
 @media screen and (hover: hover) {
   a:hover {
     text-decoration: underline;
@@ -515,9 +507,7 @@ html {
   }
 
   .content-groups,
-  .content-seealso,
-  .content-toc,
-  .content-wiki {
+  .content-toc {
     display: none;
   }
 

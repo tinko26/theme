@@ -60,28 +60,24 @@
 
         {%- endfor -%}
 
+        {%- if page.seealso -%}
+            <div class="toc-item1-links">
+                <a href="#page-seealso">See Also</a>
+            </div>
+        {%- endif -%}
+        {%- if page.external-wiki -%}
+            <div class="toc-item1-links">
+                <a href="#page-external-wiki">External Links (Wikipedia)</a>
+            </div>
+        {%- endif -%}
+        {%- if page.external -%}
+            <div class="toc-item1-links">
+                <a href="#page-external">External Links</a>
+            </div>
+        {%- endif -%}
+
         {%- if include.sidebar -%}
-            {%- if page.external -%}
-                <div class="toc-item1-links">
-                    <a href="#page-external">External Links</a>
-                </div>
-            {%- endif -%}
         {%- else -%}
-            {%- if page.seealso -%}
-                <div class="toc-item1-links">
-                    <a href="#page-seealso">See Also</a>
-                </div>
-            {%- endif -%}
-            {%- if page.wiki -%}
-                <div class="toc-item1-links">
-                    <a href="#page-wiki">Wikipedia</a>
-                </div>
-            {%- endif -%}
-            {%- if page.external -%}
-                <div class="toc-item1-links">
-                    <a href="#page-external">External Links</a>
-                </div>
-            {%- endif -%}
             {%- if page.groups -%}
                 {%- for group in page.groups -%}
                     <div class="toc-item1-group">
@@ -90,5 +86,6 @@
                 {%- endfor -%}
             {%- endif -%}
         {%- endif -%}
+
     </div>
 {%- endif -%}

@@ -549,3 +549,33 @@ html {
     font-size: 22px;
   }
 }
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 24px;
+  }
+
+  .breadcrumbs,
+  .footer,
+  .grid2,
+  .header {
+    max-width: 1600px;
+  }
+
+  .grid2 {
+    grid-template-columns: auto 40%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 26px;
+  }
+
+  .breadcrumbs,
+  .footer,
+  .grid2,
+  .header {
+    max-width: 1920px;
+  }
+}

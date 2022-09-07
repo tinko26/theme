@@ -205,6 +205,14 @@ html {
   vertical-align: top;
 }
 
+.content-main tr:first-child td {
+  border-top: 0;
+}
+
+.content-main tr:last-child td {
+  border-bottom: 0;
+}
+
 .content-main *:first-child {
   margin-top: 0;
 }

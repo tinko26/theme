@@ -476,6 +476,7 @@ html {
   display: none;
   grid-column: 2;
   grid-row: 1;
+  padding-left: 1rem;
   text-align: center;
 }
 
@@ -483,12 +484,13 @@ html {
   display: block;
   grid-column: 2;
   grid-row: 1;
+  padding-left: 1rem;
   text-align: center;
 }
 
 .toc-item1-header {
   display: grid;
-  grid-template-columns: auto 1rem;
+  grid-template-columns: auto min-content;
   grid-template-rows: auto;
 }
 
@@ -571,6 +573,7 @@ html {
   }
 
   .sidebar {
+    min-width: 258px;
     max-width: 430px;
   }
 }
@@ -588,6 +591,7 @@ html {
   }
 
   .sidebar {
+    min-width: 324px;
     max-width: 540px;
   }
 }
@@ -605,6 +609,7 @@ html {
   }
 
   .sidebar {
+    min-width: 390px;
     max-width: 650px;
   }
 }
@@ -622,6 +627,7 @@ html {
   }
 
   .sidebar {
+    min-width: 456px;
     max-width: 760px;
   }
 }

@@ -573,8 +573,8 @@ html {
   }
 
   .sidebar {
-    min-width: 258px;
-    max-width: 430px;
+    min-width: calc(0.25 * 1290px);
+    max-width: calc(0.35 * 1290px);
   }
 }
 
@@ -591,8 +591,8 @@ html {
   }
 
   .sidebar {
-    min-width: 324px;
-    max-width: 540px;
+    min-width: calc(0.25 * 1620px);
+    max-width: calc(0.35 * 1620px);
   }
 }
 
@@ -609,8 +609,8 @@ html {
   }
 
   .sidebar {
-    min-width: 390px;
-    max-width: 650px;
+    min-width: calc(0.25 * 1950px);
+    max-width: calc(0.35 * 1950px);
   }
 }
 
@@ -627,7 +627,7 @@ html {
   }
 
   .sidebar {
-    min-width: 456px;
-    max-width: 760px;
+    min-width: calc(0.25 * 2280px);
+    max-width: calc(0.35 * 2280px);
   }
 }

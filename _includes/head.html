@@ -100,11 +100,13 @@
     </script>
 
     <script type="text/javascript" src="{{ '/assets/js/vendor/jquery/jquery-3.6.1.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/content.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/highlight.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/menu.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/toc.js' | relative_url }}"></script>
 
     <script type="text/javascript">
+		$(document).ready(content);
 		$(document).ready(highlight);
     </script>
     

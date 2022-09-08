@@ -39,8 +39,8 @@
                     <a href="#{{ id1 }}">{{ name1 }}</a>
 
                     {%- if items2.size > 1 -%}
-                        <div class="toc-item1-button-open"  id="{{ id1toc_open }}"  onclick="tocOpen( '{{ id1toc }}')">&darr;</div>
-                        <div class="toc-item1-button-close" id="{{ id1toc_close }}" onclick="tocClose('{{ id1toc }}')">&uarr;</div>
+                        <div class="toc-item1-button-open"  id="{{ id1toc_open }}"  onclick="tocOpen( '{{ id1toc }}')"><i class="fas fa-fw fa-circle-chevron-down" aria-hidden="true"></i></div>
+                        <div class="toc-item1-button-close" id="{{ id1toc_close }}" onclick="tocClose('{{ id1toc }}')"><i class="fas fa-fw fa-circle-chevron-up" aria-hidden="true"></i></div>
                     {%- endif -%}
 
                 </div>

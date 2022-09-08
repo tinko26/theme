@@ -5,49 +5,29 @@
 
         {%- for item1 in items1 offset: 1 -%}
 
-            {%- assign items2       = item1      | split: '<h2'  -%}
+            {%- assign items2 = item1      | split: '<h2'  -%}
 
-            {%- assign id1          = item1                      -%}
-            {%- assign id1          = id1        | split: 'id="' -%}
-            {%- assign id1          = id1[1]     | split: '"'    -%}
-            {%- assign id1          = id1        | first         -%}
+            {%- assign id1    = item1                      -%}
+            {%- assign id1    = id1        | split: 'id="' -%}
+            {%- assign id1    = id1[1]     | split: '"'    -%}
+            {%- assign id1    = id1        | first         -%}
 
-            {%- assign name1        = item1                      -%}
-            {%- assign name1        = name1      | split: '>'    -%}
+            {%- assign name1  = item1                      -%}
+            {%- assign name1  = name1      | split: '>'    -%}
 
-            {%- assign i            = name1.size | minus: 2      -%}
+            {%- assign i      = name1.size | minus: 2      -%}
             
-            {%- assign name1        = name1      | slice: 1, i   -%}
-            {%- assign name1        = name1      | join: '>'     -%}
-            {%- assign name1        = name1      | split: '</h1' -%}
-            {%- assign name1        = name1      | first         -%}
-
-            {%- assign id1toc       = id1 -%}
-
-            {%- if include.sidebar -%}
-            {%- assign id1toc       = id1toc     | prepend: 'sidebar-' -%}
-            {%- endif -%}
-
-            {%- assign id1toc       = id1toc     | prepend: 'page-toc-' -%}
-
-            {%- assign id1toc_close = id1toc     | append: '-close' -%}
-            {%- assign id1toc_items = id1toc     | append: '-items' -%}
-            {%- assign id1toc_open  = id1toc     | append: '-open' -%}
+            {%- assign name1  = name1      | slice: 1, i   -%}
+            {%- assign name1  = name1      | join: '>'     -%}
+            {%- assign name1  = name1      | split: '</h1' -%}
+            {%- assign name1  = name1      | first         -%}
 
             <div class="toc-item1">
-                <div class="toc-item1-header">
-                    <a href="#{{ id1 }}">{{ name1 }}</a>
-
-                    {%- if items2.size > 1 -%}
-                        <div class="toc-item1-button-open"  id="{{ id1toc_open }}"  onclick="tocOpen( '{{ id1toc }}')">&darr;</div>
-                        <div class="toc-item1-button-close" id="{{ id1toc_close }}" onclick="tocClose('{{ id1toc }}')">&uarr;</div>
-                    {%- endif -%}
-
-                </div>
+                <a href="#{{ id1 }}">{{ name1 }}</a>
 
                 {%- if items2.size > 1 -%}
 
-                    <div class="toc-items2" id="{{ id1toc_items }}">
+                    <div class="toc-items2">
 
                         {%- for item2 in items2 offset: 1 -%}
 

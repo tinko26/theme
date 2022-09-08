@@ -337,8 +337,7 @@ html {
 }
 
 .group-title,
-.group-title-active
-{
+.group-title-active {
   font-size: 1.5rem;
   margin-top: 0;
 }
@@ -429,6 +428,7 @@ html {
 
 .sidebar {
   max-height: 100vh;
+  overflow-x: auto;
   overflow-y: auto;
   position: sticky;
   top: 0;
@@ -472,6 +472,31 @@ html {
   gap: 0.5rem;
 }
 
+.toc-item1-button-close {
+  display: none;
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+.toc-item1-button-open {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+.toc-item1-header {
+  display: grid;
+  grid-template-columns: auto 1rem;
+  grid-template-rows: auto;
+}
+
+.toc-item1-header a {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .toc-items1 {
   display: flex;
   flex-direction: column;
@@ -479,7 +504,7 @@ html {
 }
 
 .toc-items2 {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 1rem;
@@ -497,14 +522,13 @@ html {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 960px) {
   html {
     font-size: 20px;
   }
 
   .grid2 {
-    grid-template-columns: auto 25%;
-    grid-template-rows: auto;
+    grid-template-columns: auto auto grid-template-rows: auto;
   }
 
   .grid2-cell1 .content-groups,
@@ -527,15 +551,30 @@ html {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}
 
-@media screen and (min-width: 1280px) {
-  html {
-    font-size: 22px;
+  .sidebar {
+    max-width: 33vw;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1290px) {
+  html {
+    font-size: 22px;
+  }
+
+  .breadcrumbs,
+  .footer,
+  .grid2,
+  .header {
+    max-width: 1290px;
+  }
+
+  .sidebar {
+    max-width: 430px;
+  }
+}
+
+@media screen and (min-width: 1620px) {
   html {
     font-size: 24px;
   }
@@ -544,15 +583,15 @@ html {
   .footer,
   .grid2,
   .header {
-    max-width: 1600px;
+    max-width: 1620px;
   }
 
-  .grid2 {
-    grid-template-columns: auto 40%;
+  .sidebar {
+    max-width: 540px;
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1950px) {
   html {
     font-size: 26px;
   }
@@ -561,6 +600,27 @@ html {
   .footer,
   .grid2,
   .header {
-    max-width: 1920px;
+    max-width: 1950px;
+  }
+
+  .sidebar {
+    max-width: 650px;
+  }
+}
+
+@media screen and (min-width: 2280px) {
+  html {
+    font-size: 28px;
+  }
+
+  .breadcrumbs,
+  .footer,
+  .grid2,
+  .header {
+    max-width: 2280px;
+  }
+
+  .sidebar {
+    max-width: 760px;
   }
 }

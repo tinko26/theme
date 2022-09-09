@@ -409,8 +409,7 @@ html {
 .menu {
   align-content: center;
   align-items: baseline;
-  background-color: #263238;
-  background-color: rgba(38, 50, 56, 0.95);
+  background-image: linear-gradient(135deg, darkslategray 20%, lightskyblue 70%, lavenderblush 90%, deeppink 100%);
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
@@ -428,13 +427,11 @@ html {
 }
 
 .menu a {
-  background-color: black;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
   color: white;
   font-size: 1.5rem;
   padding: 0.5rem;
   text-decoration: none;
+  text-shadow: 0 0 1rem black;
 }
 
 .seealso-heading {

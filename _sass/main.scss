@@ -69,6 +69,10 @@ html {
   margin-bottom: 1rem;
 }
 
+.content-main div.highlighter-rouge + p {
+  margin-top: 2rem;
+}
+
 .content-main h1 {
   font-size: 1.5rem;
   margin-top: 3rem;
@@ -106,6 +110,14 @@ html {
 .content-main li {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+}
+
+.content-main p + table {
+  margin-top: 2rem;
+}
+
+.content-main p + div.highlighter-rouge {
+  margin-top: 2rem;
 }
 
 .content-main pre.highlight {
@@ -200,6 +212,10 @@ html {
   box-shadow: 0 0 0.5rem 0 #ccc;
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.content-main table + p {
+  margin-top: 2rem;
 }
 
 .content-main td {

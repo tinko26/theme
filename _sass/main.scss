@@ -391,9 +391,13 @@ html {
 }
 
 .header-background {
-  background-color: #888;
   background-image: linear-gradient(45deg, darkslategray 5%, lightskyblue 50%, lavenderblush 70%, deeppink 95%);
   border-bottom: 1px solid #888;
+}
+
+.header-line {
+  background-color: #888;
+  height: 1px;
 }
 
 .menu {

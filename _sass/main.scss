@@ -472,6 +472,16 @@ html {
   gap: 0.5rem;
 }
 
+.toc-item1 + .toc-item1-group {
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+}
+
+.toc-item1 + .toc-item1-links {
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+}
+
 .toc-item1-button-close {
   display: none;
   grid-column: 2;

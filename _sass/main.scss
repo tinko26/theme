@@ -391,8 +391,9 @@ html {
 }
 
 .header-background {
-  background-image: linear-gradient(45deg, darkslategray 0%, lightskyblue 50%, lavenderblush 60%, deeppink 95%);
-  border-bottom: 1px solid #aaa;
+  background-color: darkslategray;
+  background-image: linear-gradient(45deg, darkslategray 5%, lightskyblue 50%, lavenderblush 70%, deeppink 95%);
+  border-bottom: 1px solid #888;
 }
 
 .menu {
@@ -438,14 +439,14 @@ html {
 }
 
 .shadow1 {
-  background-image: linear-gradient(180deg, #ccc, #fff);
-  border-top: 1px solid #aaa;
+  background-image: linear-gradient(180deg, #aaa, #fff);
+  border-top: 1px solid #888;
   height: 0.5rem;
 }
 
 .shadow2 {
-  background-image: linear-gradient(180deg, #ccc, #eee);
-  border-top: 1px solid #aaa;
+  background-image: linear-gradient(180deg, #aaa, #eee);
+  border-top: 1px solid #888;
   height: 0.5rem;
 }
 

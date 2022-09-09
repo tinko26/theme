@@ -506,6 +506,11 @@ html {
   padding-top: 0.5rem;
 }
 
+.toc-item1 + .toc-item1-top {
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+}
+
 .toc-item1-button-close {
   display: none;
   grid-column: 2;
@@ -534,6 +539,11 @@ html {
 }
 
 .toc-item1-links + .toc-item1-group {
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+}
+
+.toc-item1-links + .toc-item1-top {
   border-top: 1px solid #ccc;
   padding-top: 0.5rem;
 }

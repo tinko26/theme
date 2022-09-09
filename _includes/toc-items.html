@@ -92,6 +92,9 @@
         {%- endif -%}
 
         {%- if include.sidebar -%}
+            <div class="toc-item1-top">
+                <a href="#top"><i class="fas fa-fw fa-circle-arrow-up" aria-hidden="true"></i></a>
+            </div>
         {%- else -%}
             {%- if page.groups -%}
                 {%- for group in page.groups -%}

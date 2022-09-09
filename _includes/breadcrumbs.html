@@ -8,7 +8,7 @@
         {%- if site.data.page-titles-monospace["/"] != nil -%}
             {%- assign crumb_title_monospace = site.data.page-titles-monospace["/"] -%}
         {%- endif -%}
-        <span class="current">
+        <span class="breadcrumbs-current">
             {%- if crumb_title_monospace -%}
             <code>{{ crumb_title }}</code>
             {%- else -%}
@@ -16,8 +16,7 @@
             {%- endif -%}
         </span>
         {%- if page.draft %}
-            <span class="separator">&vert;</span>
-            <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
+            <span class="breadcrumbs-draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
         {%- endif -%}
     {%- else -%}
         {%- assign crumb_path = "/" -%}
@@ -39,7 +38,6 @@
                     {{ crumb_title }}
                     {%- endif -%}
                 </a>
-                <span class="separator">&gt;</span>
             {% endif -%}
             {%- assign crumb_path_next = crumb_path | append: crumb | append: "/" -%}
             {%- assign crumb_title = crumb -%}
@@ -51,7 +49,7 @@
                 {%- assign crumb_title_monospace = site.data.page-titles-monospace[crumb_path_next] -%}
             {%- endif -%}
             {%- if forloop.last -%}
-                <span class="current">
+                <span class="breadcrumbs-current">
                     {%- if crumb_title_monospace -%}
                     <code>{{ crumb_title }}</code>
                     {%- else -%}
@@ -59,8 +57,7 @@
                     {%- endif -%}
                 </span>
                 {%- if page.draft %}
-                    <span class="separator">&vert;</span>
-                    <span class="draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
+                    <span class="breadcrumbs-draft"><i class="fas fa-fw fa-person-digging" aria-hidden="true"></i></span>
                 {%- endif -%}
             {%- else -%}
                 <a href="{{ crumb_path_next | relative_url }}">
@@ -70,7 +67,6 @@
                     {{ crumb_title }}
                     {%- endif -%}
                 </a>
-                <span class="separator">&gt;</span>
             {% endif -%}
             {%- assign crumb_path = crumb_path_next -%}
         {%- endfor -%}

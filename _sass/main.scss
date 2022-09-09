@@ -29,11 +29,21 @@ html {
 }
 
 .breadcrumbs {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
   font-size: 0.9rem;
+  gap: 0.5rem;
+  justify-content: flex-start;
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
   padding: 0.5rem 1rem;
+}
+
+.breadcrumbs :not(:first-child) {
+  border-left: 1px solid #ccc;
+  padding-left: 0.5rem;
 }
 
 .content-bottom {
@@ -377,22 +387,23 @@ html {
   padding: 1rem;
 }
 
-.header .subtitle {
+.header-background {
+  background-image: linear-gradient(45deg, darkslategray 0%, lightskyblue 35%, lavenderblush 65%, deeppink 100%);
+  border-bottom: 1px solid #888;
+}
+
+.header-subtitle {
   color: #a9bdc6;
   color: rgba(255, 255, 255, 0.5);
   font-size: 1rem;
   min-height: 1.5rem;
 }
 
-.header .title {
+.header-title {
   color: white;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-}
-
-.header-background {
-  background-image: linear-gradient(45deg, darkslategray 5%, lightskyblue 50%, lavenderblush 70%, deeppink 95%);
-  border-bottom: 1px solid #888;
+  text-shadow: 0 0 1rem black;
 }
 
 .menu {

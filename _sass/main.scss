@@ -73,8 +73,7 @@ html {
 
 .content-main div.highlighter-rouge {
   background: #384952;
-  border: 1px solid #263238;
-  box-shadow: 0 0 0.5rem 0 #888;
+  box-shadow: inset 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
 }
 
@@ -273,7 +272,7 @@ html {
 }
 
 .footer {
-  color: #888;
+  color: #454545;
   font-size: 0.9rem;
   margin-left: auto;
   margin-right: auto;
@@ -282,7 +281,7 @@ html {
 }
 
 .footer a {
-  color: #888;
+  color: #454545;
 }
 
 .footer-background {
@@ -386,8 +385,8 @@ html {
 }
 
 .header-background {
-  background-image: linear-gradient(45deg, darkslategray 0%, lightskyblue 35%, lavenderblush 65%, deeppink 100%);
-  border-bottom: 1px solid #888;
+  background-image: linear-gradient(45deg, darkslategray 0%, steelblue 50%, lightskyblue 70%, lavenderblush 80%, hotpink 90%, deeppink 100%);
+  border-bottom: 1px solid #454545;
 }
 
 .header-subtitle {
@@ -407,7 +406,7 @@ html {
 .menu {
   align-content: center;
   align-items: baseline;
-  background-image: linear-gradient(135deg, darkslategray 20%, lightskyblue 70%, lavenderblush 90%, deeppink 100%);
+  background-image: linear-gradient(135deg, darkslategray 20%, steelblue 55%, lightskyblue 75%, lavenderblush 85%, hotpink 95%, deeppink 100%);
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
@@ -444,14 +443,14 @@ html {
 }
 
 .shadow1 {
-  background-image: linear-gradient(180deg, #ccc, #fff);
-  border-top: 1px solid #888;
+  background-image: linear-gradient(180deg, #aaa, #fff);
+  border-top: 1px solid #454545;
   height: 0.5rem;
 }
 
 .shadow2 {
-  background-image: linear-gradient(180deg, #ccc, #eee);
-  border-top: 1px solid #888;
+  background-image: linear-gradient(180deg, #aaa, #eee);
+  border-top: 1px solid #454545;
   height: 0.5rem;
 }
 

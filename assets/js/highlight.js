@@ -59,7 +59,28 @@ function highlight() {
 			
 			.replace(/\\/g, '<span class="comment">\\</span>')
 			
+			/* constants */
+			
+			.replace(/\bNULL\b/g, '<span class="keyword">NULL</span>')
+			
 			/* keywords */
+			
+			.replace(/#\bdefine\b/g, '<span class="keyword">#define</span>')
+			.replace(/#\belif\b/g, '<span class="keyword">#elif</span>')
+			.replace(/#\belifdef\b/g, '<span class="keyword">#elifdef</span>')
+			.replace(/#\belifndef\b/g, '<span class="keyword">#elifndef</span>')
+			.replace(/#\belse\b/g, '<span class="keyword">#else</span>')
+			.replace(/#\bendif\b/g, '<span class="keyword">#endif</span>')
+			.replace(/#\berror\b/g, '<span class="keyword">#error</span>')
+			.replace(/#\bif\b/g, '<span class="keyword">#if</span>')
+			.replace(/#\bifdef\b/g, '<span class="keyword">#ifdef</span>')
+			.replace(/#\bifndef\b/g, '<span class="keyword">#ifndef</span>')
+			.replace(/#\binclude\b/g, '<span class="keyword">#include</span>')
+			.replace(/#\binclude_next\b/g, '<span class="keyword">#include_next</span>')
+			.replace(/#\bline\b/g, '<span class="keyword">#line</span>')
+			.replace(/#\bpragma\b/g, '<span class="keyword">#pragma</span>')
+			.replace(/#\bundef\b/g, '<span class="keyword">#undef</span>')
+			.replace(/#\bwarning\b/g, '<span class="keyword">#warning</span>')
 			
 			.replace(/\balignas\b/g, '<span class="keyword">alignas</span>')
 			.replace(/\balignof\b/g, '<span class="keyword">alignof</span>')
@@ -111,27 +132,6 @@ function highlight() {
 			.replace(/\bvoid\b/g, '<span class="keyword">void</span>')
 			.replace(/\bvolatile\b/g, '<span class="keyword">volatile</span>')
 			.replace(/\bwhile\b/g, '<span class="keyword">while</span>')
-			
-			.replace(/#\bdefine\b/g, '<span class="keyword">#define</span>')
-			.replace(/#\belif\b/g, '<span class="keyword">#elif</span>')
-			.replace(/#\belifdef\b/g, '<span class="keyword">#elifdef</span>')
-			.replace(/#\belifndef\b/g, '<span class="keyword">#elifndef</span>')
-			.replace(/#\belse\b/g, '<span class="keyword">#else</span>')
-			.replace(/#\bendif\b/g, '<span class="keyword">#endif</span>')
-			.replace(/#\berror\b/g, '<span class="keyword">#error</span>')
-			.replace(/#\bif\b/g, '<span class="keyword">#if</span>')
-			.replace(/#\bifdef\b/g, '<span class="keyword">#ifdef</span>')
-			.replace(/#\bifndef\b/g, '<span class="keyword">#ifndef</span>')
-			.replace(/#\binclude\b/g, '<span class="keyword">#include</span>')
-			.replace(/#\binclude_next\b/g, '<span class="keyword">#include_next</span>')
-			.replace(/#\bline\b/g, '<span class="keyword">#line</span>')
-			.replace(/#\bpragma\b/g, '<span class="keyword">#pragma</span>')
-			.replace(/#\bundef\b/g, '<span class="keyword">#undef</span>')
-			.replace(/#\bwarning\b/g, '<span class="keyword">#warning</span>')
-			
-			/* constants */
-			
-			.replace(/\bNULL\b/g, '<span class="keyword">NULL</span>')
 		);
 	});
 }

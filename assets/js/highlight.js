@@ -13,6 +13,7 @@ function highlight() {
 			.replaceAll('#include ', '<span class="cp-k">#include</span> ')
 			.replaceAll('#include_next ', '<span class="cp-k">#include_next</span> ')
 			.replaceAll('defined ', '<span class="cp-k">defined</span> ')
+			.replaceAll('\\', '<span class="cp-c">\\</span> ')
 		);
 	});
 	$(".language-c").each(function() {

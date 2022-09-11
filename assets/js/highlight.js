@@ -74,7 +74,7 @@ function highlight() {
 			/* integers */
 	
 			.replace(/\b[1-9][0-9]*[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
-			.replace(/\b0[0-7]+[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b0[0-7]*[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
 			.replace(/\b(0b|0B)[0-1]+[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
 			.replace(/\b(0x|0X)[0-9a-fA-F]+[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
 			

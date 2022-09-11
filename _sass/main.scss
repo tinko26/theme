@@ -135,86 +135,6 @@ html {
   padding: 1rem;
 }
 
-.content-main pre.highlight .c1 {
-  color: #99a6b2;
-}
-
-.content-main pre.highlight .cm {
-  color: #99a6b2;
-}
-
-.content-main pre.highlight .comment {
-  color: #99a6b2;
-}
-
-.content-main pre.highlight .cp {
-  color: white;
-}
-
-.content-main pre.highlight .k {
-  color: #51b8e1;
-  text-shadow: 0 0 1rem black;
-}
-
-.content-main pre.highlight .keyword {
-  color: #51b8e1;
-  text-shadow: 0 0 1rem black;
-}
-
-.content-main pre.highlight .kt {
-  color: #51b8e1;
-  text-shadow: 0 0 1rem black;
-}
-
-.content-main pre.highlight .literal {
-  color: greenyellow;
-}
-
-.content-main pre.highlight .mh {
-  color: greenyellow;
-}
-
-.content-main pre.highlight .mi {
-  color: greenyellow;
-}
-
-.content-main pre.highlight .n {
-  color: white;
-}
-
-.content-main pre.highlight .nb {
-  color: #51b8e1;
-  text-shadow: 0 0 1rem black;
-}
-
-.content-main pre.highlight .nf {
-  color: white;
-}
-
-.content-main pre.highlight .o {
-  color: white;
-}
-
-.content-main pre.highlight .p {
-  color: white;
-}
-
-.content-main pre.highlight .s {
-  color: lightsalmon;
-}
-
-.content-main pre.highlight .sc {
-  color: greenyellow;
-}
-
-.content-main pre.highlight .string {
-  color: lightsalmon;
-}
-
-.content-main pre.highlight .type {
-  color: #a8dcf0;
-}
-
 .content-main table {
   border-collapse: collapse;
   box-shadow: 0 0 0.5rem 0 #ccc;
@@ -255,6 +175,86 @@ html {
 
 .content-main :not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) > code {
   color: deeppink;
+}
+
+.content-main .language-c .c1 {
+  color: #99a6b2;
+}
+
+.content-main .language-c .cm {
+  color: #99a6b2;
+}
+
+.content-main .language-c .comment {
+  color: #99a6b2;
+}
+
+.content-main .language-c .cp {
+  color: white;
+}
+
+.content-main .language-c .k {
+  color: #51b8e1;
+  text-shadow: 0 0 1rem black;
+}
+
+.content-main .language-c .keyword {
+  color: #51b8e1;
+  text-shadow: 0 0 1rem black;
+}
+
+.content-main .language-c .kt {
+  color: #51b8e1;
+  text-shadow: 0 0 1rem black;
+}
+
+.content-main .language-c .literal {
+  color: greenyellow;
+}
+
+.content-main .language-c .mh {
+  color: greenyellow;
+}
+
+.content-main .language-c .mi {
+  color: greenyellow;
+}
+
+.content-main .language-c .n {
+  color: white;
+}
+
+.content-main .language-c .nb {
+  color: #51b8e1;
+  text-shadow: 0 0 1rem black;
+}
+
+.content-main .language-c .nf {
+  color: white;
+}
+
+.content-main .language-c .o {
+  color: white;
+}
+
+.content-main .language-c .p {
+  color: white;
+}
+
+.content-main .language-c .s {
+  color: lightsalmon;
+}
+
+.content-main .language-c .sc {
+  color: greenyellow;
+}
+
+.content-main .language-c .string {
+  color: lightsalmon;
+}
+
+.content-main .language-c .type {
+  color: #a8dcf0;
 }
 
 .content-top {

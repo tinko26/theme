@@ -55,9 +55,32 @@ function highlight() {
 			$(this)
 			.html()
 			
+			/* strings */
+			
+			.replace(/"(\\.|[^"])*"/g, function replace(x) { return '<span class="string">' + x + '</span>'; })
+			
+			/* floating-point numbers */
+			
+			.replace(/(?<!(\d|0x|0X))\.\d+([eE][+-]?\d+)?[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b\d+\.(?![\deEfFlL])/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b\d+\.\d+([eE][+-]?\d+)?[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b\d+[eE][+-]?\d+[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			
+			.replace(/\b(0x|0X)\.[\da-fA-F]+([pP][+-]?[\da-fA-F]+)?[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b(0x|0X)[\da-fA-F]+\.(?![\da-fA-FpP])/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b(0x|0X)[\da-fA-F]+\.[\da-fA-F]+([pP][+-]?[\da-fA-F]+)?[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b(0x|0X)[\da-fA-F]+[pP][+-]?[\da-fA-F]+[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			
+			/* integers */
+	
+			.replace(/\b[1-9][0-9]*[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b0[0-7]+[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b(0b|0B)[0-1]+[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/\b(0x|0X)[0-9a-fA-F]+[uU]?[lL]?[lL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			
 			/* comments */
 			
-			.replace(/\\/g, '<span class="comment">\\</span>')
+			.replace(/ \\\n/g, ' <span class="comment">\\</span>\n')
 			
 			/* constants */
 			

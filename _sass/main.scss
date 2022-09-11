@@ -199,8 +199,16 @@ html {
   color: white;
 }
 
+.content-main pre.highlight .s {
+  color: lightsalmon;
+}
+
 .content-main pre.highlight .sc {
   color: greenyellow;
+}
+
+.content-main pre.highlight .string {
+  color: lightsalmon;
 }
 
 .content-main pre.highlight .type {

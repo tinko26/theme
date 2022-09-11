@@ -14,7 +14,7 @@ function highlight() {
 			
 			/* floating-point numbers */
 			
-			.replace(/(?<!(\d|0x|0X))\.\d+([eE][+-]?\d+)?[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
+			.replace(/ \.\d+([eE][+-]?\d+)?[fFlL]?\b/g, function replace(x) { return ' <span class="literal">' + x + '</span>'; })
 			.replace(/\b\d+\.(?![\deEfFlL])/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
 			.replace(/\b\d+\.\d+([eE][+-]?\d+)?[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })
 			.replace(/\b\d+[eE][+-]?\d+[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })

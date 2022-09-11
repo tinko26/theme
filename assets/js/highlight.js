@@ -8,6 +8,10 @@ function highlight() {
 			
 			.replace(/"(\\.|[^"])*"/g, function replace(x) { return '<span class="string">' + x + '</span>'; })
 			
+			/* includes */
+			
+			.replace(/&lt;.*&gt;/g, function replace(x) { return '<span class="include">' + x + '</span>'; })
+			
 			/* floating-point numbers */
 			
 			.replace(/(?<!(\d|0x|0X))\.\d+([eE][+-]?\d+)?[fFlL]?\b/g, function replace(x) { return '<span class="literal">' + x + '</span>'; })

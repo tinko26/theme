@@ -257,6 +257,15 @@ html {
   color: #a8dcf0;
 }
 
+.content-main .language-c .include,
+.content-main .language-c .include .comment,
+.content-main .language-c .include .keyword,
+.content-main .language-c .include .literal,
+.content-main .language-c .include .string,
+.content-main .language-c .include .type {
+  color: white;
+}
+
 .content-top {
   height: 2rem;
 }

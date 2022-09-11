@@ -143,20 +143,20 @@ html {
   color: #99a6b2;
 }
 
+.content-main pre.highlight .comment {
+  color: #99a6b2;
+}
+
 .content-main pre.highlight .cp {
   color: white;
 }
 
-.content-main pre.highlight .cp-c {
-  color: #99a6b2;
-}
-
-.content-main pre.highlight .cp-k {
+.content-main pre.highlight .k {
   color: #51b8e1;
   text-shadow: 0 0 1rem black;
 }
 
-.content-main pre.highlight .k {
+.content-main pre.highlight .keyword {
   color: #51b8e1;
   text-shadow: 0 0 1rem black;
 }
@@ -166,9 +166,8 @@ html {
   text-shadow: 0 0 1rem black;
 }
 
-.content-main pre.highlight .kt-t {
-  color: #51b8e1;
-  text-shadow: 0 0 1rem black;
+.content-main pre.highlight .literal {
+  color: greenyellow;
 }
 
 .content-main pre.highlight .mh {
@@ -183,15 +182,6 @@ html {
   color: white;
 }
 
-.content-main pre.highlight .n-k {
-  color: #51b8e1;
-  text-shadow: 0 0 1rem black;
-}
-
-.content-main pre.highlight .n-t {
-  color: #a8dcf0;
-}
-
 .content-main pre.highlight .nb {
   color: #51b8e1;
   text-shadow: 0 0 1rem black;
@@ -199,11 +189,6 @@ html {
 
 .content-main pre.highlight .nf {
   color: white;
-}
-
-.content-main pre.highlight .nf-k {
-  color: #51b8e1;
-  text-shadow: 0 0 1rem black;
 }
 
 .content-main pre.highlight .o {
@@ -216,6 +201,10 @@ html {
 
 .content-main pre.highlight .sc {
   color: greenyellow;
+}
+
+.content-main pre.highlight .type {
+  color: #a8dcf0;
 }
 
 .content-main table {

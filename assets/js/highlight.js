@@ -1,55 +1,4 @@
 function highlight() {
-	$(".language-c").each(function() {
-		$(this).html(
-			$(this)
-			.html()
-			
-			/* keywords */
-			
-			.replace(/\bbool\b/g, '<span class="keyword">bool</span>')
-			
-			/* types */
-			
-			.replace(/\b[a-zA-Z_][a-zA-Z0-9_]*_t\b/g, function replace(x) { 
-				return '<span class="type">' + x + '</span>'; 
-			})
-			
-			/* types that are keywords */
-			
-			.replace(/\bint8_t\b/g, '<span class="keyword">int8_t</span>')
-			.replace(/\bint16_t\b/g, '<span class="keyword">int16_t</span>')
-			.replace(/\bint32_t\b/g, '<span class="keyword">int32_t</span>')
-			.replace(/\bint64_t\b/g, '<span class="keyword">int64_t</span>')
-			.replace(/\bint_fast8_t\b/g, '<span class="keyword">int_fast8_t</span>')
-			.replace(/\bint_fast16_t\b/g, '<span class="keyword">int_fast16_t</span>')
-			.replace(/\bint_fast32_t\b/g, '<span class="keyword">int_fast32_t</span>')
-			.replace(/\bint_fast64_t\b/g, '<span class="keyword">int_fast64_t</span>')
-			.replace(/\bint_least8_t\b/g, '<span class="keyword">int_least8_t</span>')
-			.replace(/\bint_least16_t\b/g, '<span class="keyword">int_least16_t</span>')
-			.replace(/\bint_least32_t\b/g, '<span class="keyword">int_least32_t</span>')
-			.replace(/\bint_least64_t\b/g, '<span class="keyword">int_least64_t</span>')
-			.replace(/\bintmax_t\b/g, '<span class="keyword">intmax_t</span>')
-			.replace(/\bintptr_t\b/g, '<span class="keyword">intptr_t</span>')
-			.replace(/\bmax_align_t\b/g, '<span class="keyword">max_align_t</span>')
-			.replace(/\bnullptr_t\b/g, '<span class="keyword">nullptr_t</span>')
-			.replace(/\bptrdiff_t\b/g, '<span class="keyword">ptrdiff_t</span>')
-			.replace(/\bsize_t\b/g, '<span class="keyword">size_t</span>')
-			.replace(/\buint8_t\b/g, '<span class="keyword">uint8_t</span>')
-			.replace(/\buint16_t\b/g, '<span class="keyword">uint16_t</span>')
-			.replace(/\buint32_t\b/g, '<span class="keyword">uint32_t</span>')
-			.replace(/\buint64_t\b/g, '<span class="keyword">uint64_t</span>')
-			.replace(/\buint_fast8_t\b/g, '<span class="keyword">uint_fast8_t</span>')
-			.replace(/\buint_fast16_t\b/g, '<span class="keyword">uint_fast16_t</span>')
-			.replace(/\buint_fast32_t\b/g, '<span class="keyword">uint_fast32_t</span>')
-			.replace(/\buint_fast64_t\b/g, '<span class="keyword">uint_fast64_t</span>')
-			.replace(/\buint_least8_t\b/g, '<span class="keyword">uint_least8_t</span>')
-			.replace(/\buint_least16_t\b/g, '<span class="keyword">uint_least16_t</span>')
-			.replace(/\buint_least32_t\b/g, '<span class="keyword">uint_least32_t</span>')
-			.replace(/\buint_least64_t\b/g, '<span class="keyword">uint_least64_t</span>')
-			.replace(/\buintmax_t\b/g, '<span class="keyword">uintmax_t</span>')
-			.replace(/\buintptr_t\b/g, '<span class="keyword">uintptr_t</span>')
-		);
-	});
 	$(".language-c .cp").each(function() {
 		$(this).html(
 			$(this)
@@ -155,6 +104,57 @@ function highlight() {
 			.replace(/\bvoid\b/g, '<span class="keyword">void</span>')
 			.replace(/\bvolatile\b/g, '<span class="keyword">volatile</span>')
 			.replace(/\bwhile\b/g, '<span class="keyword">while</span>')
+		);
+	});
+	$(".language-c").each(function() {
+		$(this).html(
+			$(this)
+			.html()
+			
+			/* keywords */
+			
+			.replace(/\bbool\b/g, '<span class="keyword">bool</span>')
+			
+			/* types */
+			
+			.replace(/\b[a-zA-Z_][a-zA-Z0-9_]*_t\b/g, function replace(x) { 
+				return '<span class="type">' + x + '</span>'; 
+			})
+			
+			/* types that are keywords */
+			
+			.replace(/\bint8_t\b/g, '<span class="keyword">int8_t</span>')
+			.replace(/\bint16_t\b/g, '<span class="keyword">int16_t</span>')
+			.replace(/\bint32_t\b/g, '<span class="keyword">int32_t</span>')
+			.replace(/\bint64_t\b/g, '<span class="keyword">int64_t</span>')
+			.replace(/\bint_fast8_t\b/g, '<span class="keyword">int_fast8_t</span>')
+			.replace(/\bint_fast16_t\b/g, '<span class="keyword">int_fast16_t</span>')
+			.replace(/\bint_fast32_t\b/g, '<span class="keyword">int_fast32_t</span>')
+			.replace(/\bint_fast64_t\b/g, '<span class="keyword">int_fast64_t</span>')
+			.replace(/\bint_least8_t\b/g, '<span class="keyword">int_least8_t</span>')
+			.replace(/\bint_least16_t\b/g, '<span class="keyword">int_least16_t</span>')
+			.replace(/\bint_least32_t\b/g, '<span class="keyword">int_least32_t</span>')
+			.replace(/\bint_least64_t\b/g, '<span class="keyword">int_least64_t</span>')
+			.replace(/\bintmax_t\b/g, '<span class="keyword">intmax_t</span>')
+			.replace(/\bintptr_t\b/g, '<span class="keyword">intptr_t</span>')
+			.replace(/\bmax_align_t\b/g, '<span class="keyword">max_align_t</span>')
+			.replace(/\bnullptr_t\b/g, '<span class="keyword">nullptr_t</span>')
+			.replace(/\bptrdiff_t\b/g, '<span class="keyword">ptrdiff_t</span>')
+			.replace(/\bsize_t\b/g, '<span class="keyword">size_t</span>')
+			.replace(/\buint8_t\b/g, '<span class="keyword">uint8_t</span>')
+			.replace(/\buint16_t\b/g, '<span class="keyword">uint16_t</span>')
+			.replace(/\buint32_t\b/g, '<span class="keyword">uint32_t</span>')
+			.replace(/\buint64_t\b/g, '<span class="keyword">uint64_t</span>')
+			.replace(/\buint_fast8_t\b/g, '<span class="keyword">uint_fast8_t</span>')
+			.replace(/\buint_fast16_t\b/g, '<span class="keyword">uint_fast16_t</span>')
+			.replace(/\buint_fast32_t\b/g, '<span class="keyword">uint_fast32_t</span>')
+			.replace(/\buint_fast64_t\b/g, '<span class="keyword">uint_fast64_t</span>')
+			.replace(/\buint_least8_t\b/g, '<span class="keyword">uint_least8_t</span>')
+			.replace(/\buint_least16_t\b/g, '<span class="keyword">uint_least16_t</span>')
+			.replace(/\buint_least32_t\b/g, '<span class="keyword">uint_least32_t</span>')
+			.replace(/\buint_least64_t\b/g, '<span class="keyword">uint_least64_t</span>')
+			.replace(/\buintmax_t\b/g, '<span class="keyword">uintmax_t</span>')
+			.replace(/\buintptr_t\b/g, '<span class="keyword">uintptr_t</span>')
 		);
 	});
 }

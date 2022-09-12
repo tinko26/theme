@@ -397,7 +397,7 @@ html {
 
 .header-background {
   background-image: linear-gradient(-15deg, #2f4f4fc9 0%, transparent 50%, #87cefa8f 100%);
-  border-bottom: 1px solid #888;
+  border-bottom: thin solid #888;
 }
 
 .header-subtitle {
@@ -417,7 +417,7 @@ html {
 .menu {
   align-content: center;
   align-items: baseline;
-  background-image: linear-gradient(135deg, darkslategray 20%, steelblue 55%, lightskyblue 75%, lavenderblush 85%, hotpink 95%, deeppink 100%);
+  background-image: linear-gradient(135deg, #2f4f4ff5 0%, #4682b4f5 50%, #87cefaf5 100%);
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
@@ -455,13 +455,13 @@ html {
 
 .shadow1 {
   background-image: linear-gradient(180deg, #ccc, #fff);
-  border-top: 1px solid #888;
+  border-top: thin solid #888;
   height: 0.5rem;
 }
 
 .shadow2 {
   background-image: linear-gradient(180deg, #ccc, #eee);
-  border-top: 1px solid #888;
+  border-top: thin solid #888;
   height: 0.5rem;
 }
 

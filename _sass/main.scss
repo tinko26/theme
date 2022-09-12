@@ -136,8 +136,9 @@ html {
 }
 
 .content-main table {
+  border: thin solid #eee;
   border-collapse: collapse;
-  box-shadow: 0 0 0.5rem 0 #ccc;
+  box-shadow: 0 0 0.5rem 0 #eee;
   margin-bottom: 1rem;
   width: 100%;
 }
@@ -159,14 +160,6 @@ html {
   padding: 0.5rem;
   text-align: left;
   vertical-align: top;
-}
-
-.content-main tr:first-child td {
-  border-top: 0;
-}
-
-.content-main tr:last-child td {
-  border-bottom: 0;
 }
 
 .content-main *:first-child {

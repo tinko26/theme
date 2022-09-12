@@ -42,7 +42,7 @@ html {
 }
 
 .breadcrumbs :not(:first-child) {
-  border-left: 1px solid #ccc;
+  border-left: thin solid #ccc;
   padding-left: 0.5rem;
 }
 
@@ -147,8 +147,8 @@ html {
 }
 
 .content-main td {
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-bottom: thin solid #eee;
+  border-top: thin solid #eee;
   padding: 0.5rem;
   text-align: left;
   vertical-align: top;
@@ -397,7 +397,7 @@ html {
 
 .header-background {
   background-image: linear-gradient(-15deg, #2f4f4fc9 0%, transparent 50%, #87cefa8f 100%);
-  border-bottom: thin solid #888;
+  border-bottom: thin solid #aaa;
 }
 
 .header-subtitle {
@@ -455,13 +455,13 @@ html {
 
 .shadow1 {
   background-image: linear-gradient(180deg, #ccc, #fff);
-  border-top: thin solid #888;
+  border-top: thin solid #aaa;
   height: 0.5rem;
 }
 
 .shadow2 {
   background-image: linear-gradient(180deg, #ccc, #eee);
-  border-top: thin solid #888;
+  border-top: thin solid #aaa;
   height: 0.5rem;
 }
 
@@ -493,7 +493,7 @@ html {
 }
 
 .sidebar-toc {
-  border-left: 1px solid #ccc;
+  border-left: thin solid #ccc;
 }
 
 .sidebar-top {
@@ -512,17 +512,17 @@ html {
 }
 
 .toc-item1 + .toc-item1-group {
-  border-top: 1px solid #ccc;
+  border-top: thin solid #ccc;
   padding-top: 0.5rem;
 }
 
 .toc-item1 + .toc-item1-links {
-  border-top: 1px solid #ccc;
+  border-top: thin solid #ccc;
   padding-top: 0.5rem;
 }
 
 .toc-item1 + .toc-item1-top {
-  border-top: 1px solid #ccc;
+  border-top: thin solid #ccc;
   padding-top: 0.5rem;
 }
 
@@ -554,12 +554,12 @@ html {
 }
 
 .toc-item1-links + .toc-item1-group {
-  border-top: 1px solid #ccc;
+  border-top: thin solid #ccc;
   padding-top: 0.5rem;
 }
 
 .toc-item1-links + .toc-item1-top {
-  border-top: 1px solid #ccc;
+  border-top: thin solid #ccc;
   padding-top: 0.5rem;
 }
 
@@ -614,7 +614,7 @@ html {
   }
 
   .grid2-cell2 .group {
-    border-left: 1px solid #ccc;
+    border-left: thin solid #ccc;
     padding-left: 1rem;
     padding-right: 1rem;
   }

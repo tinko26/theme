@@ -282,7 +282,7 @@ html {
 }
 
 .footer {
-  color: #454545;
+  color: #888;
   font-size: 0.9rem;
   margin-left: auto;
   margin-right: auto;
@@ -291,7 +291,7 @@ html {
 }
 
 .footer a {
-  color: #454545;
+  color: #888;
 }
 
 .footer-background {
@@ -307,6 +307,7 @@ html {
 }
 
 .grid1-cell1 {
+  background-image: linear-gradient(45deg, darkslategray 0%, steelblue 50%, lightskyblue 100%);
   grid-column: 1;
   grid-row: 1;
 }
@@ -395,8 +396,8 @@ html {
 }
 
 .header-background {
-  background-image: linear-gradient(45deg, darkslategray 0%, steelblue 50%, lightskyblue 70%, lavenderblush 80%, hotpink 90%, deeppink 100%);
-  border-bottom: 1px solid #454545;
+  background-image: linear-gradient(-15deg, #2f4f4fc9 0%, transparent 50%, #87cefa8f 100%);
+  border-bottom: 1px solid #888;
 }
 
 .header-subtitle {
@@ -453,14 +454,14 @@ html {
 }
 
 .shadow1 {
-  background-image: linear-gradient(180deg, #aaa, #fff);
-  border-top: 1px solid #454545;
+  background-image: linear-gradient(180deg, #ccc, #fff);
+  border-top: 1px solid #888;
   height: 0.5rem;
 }
 
 .shadow2 {
-  background-image: linear-gradient(180deg, #aaa, #eee);
-  border-top: 1px solid #454545;
+  background-image: linear-gradient(180deg, #ccc, #eee);
+  border-top: 1px solid #888;
   height: 0.5rem;
 }
 

@@ -175,6 +175,7 @@ html {
 
 .content-main :not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(pre) > code {
   color: deeppink;
+  text-shadow: 0 0 0.25rem rgba(255, 20, 147, 0.25)
 }
 
 .content-main .language-c .c1 {

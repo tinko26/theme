@@ -105,7 +105,6 @@ function highlight() {
 			.replace(/\btypeof_unqual\b/g, '<span class="keyword">typeof_unqual</span>')
 			.replace(/\bunion\b/g, '<span class="keyword">union</span>')
 			.replace(/\bunsigned\b/g, '<span class="keyword">unsigned</span>')
-			.replace(/\bvoid\b/g, '<span class="keyword">void</span>')
 			.replace(/\bvolatile\b/g, '<span class="keyword">volatile</span>')
 			.replace(/\bwhile\b/g, '<span class="keyword">while</span>')
 		);
@@ -118,6 +117,7 @@ function highlight() {
 			/* keywords */
 			
 			.replace(/\bbool\b/g, '<span class="keyword">bool</span>')
+			.replace(/\bvoid\b/g, '<span class="keyword">void</span>')
 			
 			/* types */
 			

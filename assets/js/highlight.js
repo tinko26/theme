@@ -8,6 +8,12 @@ function highlight() {
 			
 			.replace(/"(\\.|[^"])*"/g, function replace(x) { return '<span class="string">' + x + '</span>'; })
 			
+			/* compounds */
+			
+			.replace(/\benum[\s\\]+[a-zA-Z_][a-zA-Z0-9_]*\b/g, function replace(x) { return '<span class="compound">' + x + '</span>'; })
+			.replace(/\bstruct\s[a-zA-Z_][a-zA-Z0-9_]*\b/g, function replace(x) { return '<span class="compound">' + x + '</span>'; })
+			.replace(/\bunion\s[a-zA-Z_][a-zA-Z0-9_]*\b/g, function replace(x) { return '<span class="compound">' + x + '</span>'; })
+			
 			/* includes */
 			
 			.replace(/&lt;.*&gt;/g, function replace(x) { return '<span class="include">' + x + '</span>'; })
@@ -118,6 +124,12 @@ function highlight() {
 			
 			.replace(/\bbool\b/g, '<span class="keyword">bool</span>')
 			.replace(/\bvoid\b/g, '<span class="keyword">void</span>')
+			
+			/* compounds */
+			
+			.replace(/<span class="k">enum<\/span>\s+<span class="n">[a-zA-Z_][a-zA-Z0-9_]*<\/span>/g, function replace(x) { return '<span class="compound">' + x + '</span>'; })
+			.replace(/<span class="k">struct<\/span>\s+<span class="n">[a-zA-Z_][a-zA-Z0-9_]*<\/span>/g, function replace(x) { return '<span class="compound">' + x + '</span>'; })
+			.replace(/<span class="k">union<\/span>\s+<span class="n">[a-zA-Z_][a-zA-Z0-9_]*<\/span>/g, function replace(x) { return '<span class="compound">' + x + '</span>'; })
 			
 			/* types */
 			
